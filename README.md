@@ -31,7 +31,7 @@ Intereses: Tecnología, Finanzas
 
 Paginas de Rreferencia:
 
-1) https://www.diastintos.com.ar/
+1)https://www.diastintos.com.ar/
 De este sitio nos inspiramos en el tipo de producto ofrecido y la estética de la pagina principal(home).
 Y además para el detalle de producto.
 
