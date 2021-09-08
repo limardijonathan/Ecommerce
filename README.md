@@ -3,28 +3,29 @@ Orientamos nuestro negocio a un publico joven/medio con el cual compartir un poc
 
 Nosotros:
 Jonathan Limardi
-De donde es: De buenos aires, capital.
-Ocupación: Analista Funcional
-Edad: 30
-Intereses: IT, Deportes, Comida
+*De donde es: De buenos aires, capital.
+*Ocupación: Analista Funcional
+*Edad: 30
+*Intereses: IT, Deportes, Comida
 
 
 Maria Sol Malnis
-De donde es: Córdoba Capital
-Ocupación:Estudiante
-Edad: 20
+*De donde es: Córdoba Capital
+*Ocupación:Estudiante
+*Edad: 20
+*Intereses: Danza, Libros
 
 Franco Aranibar
-De donde es: Rosario, Argentina
-Ocupación: estudiante
-Edad:18
-interses: libros,  gym
+*De donde es: Rosario, Argentina
+*Ocupación: estudiante
+*Edad:18
+*Interses: libros,  gym
 
 Mauro Rey
-De donde es: Zona Sur Gran Buenos Aires
-Ocupación: Comerciante
-Edad: 37 
-Intereses: Tecnología, Finanzas
+*De donde es: Zona Sur Gran Buenos Aires
+*Ocupación: Comerciante
+*Edad: 37 
+*Intereses: Tecnología, Finanzas
 
 
 
