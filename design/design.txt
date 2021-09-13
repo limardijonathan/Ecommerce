@@ -1,0 +1,2 @@
+Elegimos para nuestro proyecto las siguientes fuentes:
+    -font-family: Montserrat, sans-serif
