@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat" , sans-serif;
+}
+
+#logo{
+    background-color:rgba(235, 217, 217, 0.438) 
+    
+
+}
+
+img{
+    width:100%;
+}
+
+
+#main-box{
+    margin:auto;
+    width:65%;
+    border:#56203d solid 1px;
+    border-radius: 5px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:5px;
+    background-color:rgba(235, 217, 217, 0.767) ;
+}
+
+h2{
+    line-height: 40px;
+    text-align: center;
+}
+
+.info{
+    padding-top: 20px;
+    text-align: center;
+}
+
+input{
+   width: 185px;
+}
+
+#button{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: #d0a5c0;
+
+}
+
+main{
+    position: relative;
+    height: 400px;
+    /* background-image:  url("https://static.vecteezy.com/system/resources/previews/001/905/119/non_2x/background-of-cups-wine-icons-free-vector.jpg"); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4LjVtnQxr_qYkzReTF0nqqTNQuVOArAbwKg&usqp=CAU);
+    background-repeat: repeat;
+}
+
+footer{
+    display: flex;
+    padding: 15px 20px 0px;
+    justify-content: space-between;
+}
+.icono{
+    font-size: 20px;
+}
+
+ul{
+
+    list-style-type: none;
+    
+}
+
+li{
+    color: black;
+}
+
+
+
+@media (min-width:480px){
+    img{
+        width: 30%;
+    }
+    #main-box{
+        width:50%;
+    }
+    input{
+        width: 215px;
+    }
+    main{
+        height: 442px;
+    }
+
+
+}
+
+@media(min-width:768px){
+    #main-box{
+        width:40%;
+    }
+    img{
+        width:22%;
+    }
+}
+
+@media(min-width:1200px){
+    #main-box{
+        width:30%;
+    }
+    img{
+        width: 15%;
+    }
+}
