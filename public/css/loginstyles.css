@@ -6,7 +6,7 @@
 }
 
 #logo{
-    background-color:rgba(235, 217, 217, 0.438) 
+    background-color: white
     
 
 }
@@ -65,22 +65,28 @@ main{
 
 footer{
     display: flex;
-    padding: 15px 20px 0px;
+    padding: 15px 30px 0px;
     justify-content: space-between;
+    background-color: #56203d;
+
 }
 .icono{
-    font-size: 20px;
+    font-size: 25px;
+    padding: 5px;
 }
 
 ul{
 
     list-style-type: none;
+    line-height: 20px;
     
 }
-
-li{
-    color: black;
+a{
+    color:white
 }
+
+
+
 
 
 
