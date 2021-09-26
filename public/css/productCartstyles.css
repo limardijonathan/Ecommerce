@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat" , sans-serif;
+}
+/* estilos del header */
+#logo{
+    background-color: white
+}
+
+.img-logo{
+    width:100%;
+}
+
+
+/* estilos del main */
+
+.title-cart{
+    padding: 15px;
+    margin-left: 5px;
+}
+.title-box{
+    display:none
+}
+
+.product-box{
+    border-bottom:rgba(235, 217, 217, 0.767) 1px solid;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+
+.img-product{
+    width: 100%;
+}
+.div-img-product{
+    width:55%;
+}
+
+.description{
+    border: solid 1px #d0a5c0;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: center;
+    padding: 3px;
+}
+
+.img-product-description{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.cost{
+    display: flex;
+    justify-content:space-around;
+    margin-top: 30px; /* acordarse que es distinto*/
+}
+
+#quantity{
+    width: 20px;
+    text-align: center;
+    border: solid 1px #d0a5c0
+}
+
+
+
+/*  */
+#zip-code{
+    margin-top: 25px;
+    border-bottom: rgba(235, 217, 217, 0.767) 1px solid;
+    padding-bottom: 25px;
+}
+#zip-code h4{
+    padding: 2px;
+    border: solid 1px #56638a;
+    border-radius: 7px;
+    width:50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+.zip-code-button{
+    text-align: center;
+    
+}
+
+#zip-code button{
+    padding: 2px;
+    border: solid 1px #56638a;
+    border-radius: 7px;
+    background-color: white;
+
+}
+
+
+#buy{
+    margin-top:25px;
+    line-height:30px;
+    padding-bottom: 20px;
+
+}
+#buy a ,#buy div{
+    text-align: center;
+}
+
+#buy a h4{
+    padding: 2px;
+    border: solid 1px #56638a;
+    border-radius:7px;
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    color:black;
+
+}
+
+#buy .box-total{
+    background-color:#d0a5c0;
+    margin:15px;
+    border-radius: 7px;
+    text-align: left;
+    padding:10px;
+    padding-left: 15px;
+}
+
+.subtotal{
+    font-size: 14px;
+    opacity: 50%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px rgba(235, 217, 217, 0.767) ;
+}
+.total{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#finish-purchase{
+    background-color: #56203d;
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+#bottom-section{
+    margin-bottom: 30px;
+}
+
+
+
+/* estilos del footer */
+
+footer{
+    display: flex;
+    padding: 15px 30px 0px;
+    justify-content: space-between;
+    background-color: #56203d;
+
+}
+.icono{
+    font-size: 25px;
+    padding: 5px;
+}
+
+ul{
+
+    list-style-type: none;
+    line-height: 20px;
+    
+}
+footer a{
+    color:white
+}
+
+
+@media (min-width:480px){
+    .img-logo{
+        width: 30%;
+    }
+    
+}
+
+@media(min-width:768px){
+    .img-logo{
+        width:22%;
+    }
+    .product-box,.title-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #title-cost,.cost{
+        display: flex;
+        justify-content:space-around;
+        width: 70%;
+    }
+    
+    .img-product-description,#title-product{
+        width: 30%;
+    }
+    .detail{
+        width: 23%;
+        text-align:center;
+
+    }
+    .temporary{
+        display: none;
+    }
+    .title-box{
+        padding-top:25px;
+        padding-bottom: 10px;
+        border-bottom: solid 1px rgba(235, 217, 217, 0.767) ;
+    }
+
+    #bottom-section{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 30px 30px;
+    }
+    #zip-code{
+        border-bottom: none;
+        border-right: rgba(235, 217, 217, 0.767) 1px solid;
+        padding-right: 20px;
+        width: 35%;
+    }
+    #buy{
+        border-left:rgba(235, 217, 217, 0.767) 1px solid ;
+        padding-left: 20px;
+        width: 35%;
+    }
+
+
+}
+
+@media(min-width:1200px){
+   
+    .img-logo{
+        width: 15%;
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel= "stylesheet" href="/css/normalize.css">
+    <link href="/css/productcartstyles.css" rel="stylesheet">
+    <title>productCart</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img class="img-logo"src= "/img/logo.png" alt= 'logo'/>
+        </div>
+        
+    </header>
+    <main>
+        <section id="top-section">
+            <div class="title-cart">
+                <h2>Mi Carrito</h2>
+            </div>
+            <div class="title-box">
+                <div id="title-product">
+                    <h4>PRODUCTO</h4>
+                </div>
+                <div id="title-cost">
+                    <h4 class="detail">PRECIO</h4>
+                    <h4 class="detail">CANTIDAD</h4>
+                    <h4 class="detail">TOTAL</h4>
+                </div>
+ 
+            </div>
+            <div class="product-box">
+                <div class="img-product-description">
+                    <div class="div-img-product">
+                        <img class="img-product" src="/img/malbec-mendocino.png" alt="malbec-mendocino">
+                    </div>
+                    <div>
+                        <h4 class="description">Combo Malbec Mendocino x 3</h4>
+                        <h4 class="description">codigo: 12334</h4>
+                        <h4 class="description">Bodega: Manos Negras</h4>
+                    </div>
+                </div>
+                <div class="cost">
+                    <div class="detail">
+                        <h4 class="temporary">PRECIO</h4>
+                        <h4>$1523</h4>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-plus"></i>
+                        <input type="number" min="1" name="quantity" placeholder="1" id="quantity"/>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="detail">
+                        <h4 class="temporary">TOTAL</h4>
+                        <h4>$1523</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="bottom-section">
+            <div id="zip-code">
+                <div>
+                    <h4>caluclar envio</h4>
+                </div>
+                <div class="zip-code-button">
+                    <input type="text" placeholder="Ingresar código postal">
+                    <button type="submit">Calcular</button>
+                </div>
+                
+            </div>
+            <div id="buy">
+                <div>
+                    <a href="#"><h4>sumar cupón de descuento</h4></a>
+
+                </div>
+                <div class="box-total">
+                    <div class="subtotal">
+                        <h4>subtotal</h4>
+                        <h4>$$$</h4>
+                    </div>
+                    <div class="total">
+                        <h4>total</h4>
+                        <h4>$$$</h4>
+
+                    </div>
+                    
+                </div>
+                <div>
+                    <button type="submit" id="finish-purchase">Finalizar compra </button>
+                </div>
+               
+            </div>
+        </section>
+        
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href= '#'>Tienda</a></li>
+            <li><a href= '#'>Contacto</a></li>
+            <li><a href= '#'>Cómo comprar</a></li>
+            <li><a href= '#'>Envios</a></li>
+            <li><a href= '#'>Arrepentimiento de compra</a></li>
+            <li><a href= '#'>Legales</a></li>
+            <li><a href= '#'>Promociones</a></li>
+        </ul>
+        <div id="div-icono">
+            <a href="mailto: buenostintos@gmail.com"><i class="icono far fa-envelope"></i></a>
+            <a href="https://www.instagram.com/"><i class="icono fab fa-instagram"></i></a>
+            <a href="https://es-la.facebook.com/"><i class="icono fab fa-facebook-square"></i></a>
+            
+        </div>
+    </footer>

@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel= "stylesheet" href="/css/normalize.css">
-    <link href="/css/loginstyles.css" rel="stylesheet">
-    <title>Login</title>
+    <link href="/css/registerstyles.css" rel="stylesheet">
+    <title>Register</title>
 </head>
 <body>
     <header>
@@ -24,21 +24,34 @@
             <form action="/" method="POST"> 
                 <div>
                     <h2>
-                        ¡Bienvenido Nuevamente!
+                        ¡Crea tu cuenta!
                     </h2>
                 </div>
                 <div class="info">
-                    <label for="e-mail">Email:</label><br/>
-                    <input type="email" name="email" placeholder="ingresar email" id="e-mail" required> 
+                    <label for="user-name">Nombre de usuari@:</label><br/>
+                    <input type="text" name="userName" placeholder="ingresar su Nombre" id="name" required maxlength="10" minlength="3">
                 </div>
                 <div class="info">
-                    <label for="password">Contraseña:</label></br>
-                    <input name="password" type="password" placeholder="Ingresar Contraseña" id="password" required maxlength="10" minlength="5">
+                    <label for="e-mail">Email:</label><br/>
+                    <input type="email" name="email" placeholder="ingresar email" id="e-mail" required>
+                </div>
+                <div class="info">
+                    <label for="password">Contraseña:</label><br/>
+                    <input name="password" type="password" placeholder="Ingresar Contraseña" id="password" required maxlength="10" minlength="5" >
+                </div>
+                <div class="info">
+                    <label for="password2">Confirmar Contraseña:</label><br/>
+                    <input name="password2" type="password" placeholder="Confirmar Contraseña" id="password2" required maxlength="10" minlength="5" >
+                </div>
+                <div class="info">
+                    <label for="birthDate">Fecha de Nacimiento:</label><br/>
+                    <input type="date" name="birth-date" id="birthDate" placeholder="Fecha de nacimiento" required max="2003-09-25"/>
                 </div>
                 <div id="button">
-                    <button type="submit">Iniciar sesión</button>
+                    <button type="submit">Crear Cuenta</button>
                 </div>
             </form>
+
         </div>
     </main>
     <footer>
