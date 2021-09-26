@@ -75,6 +75,7 @@
     width: 100%;
     display: inline-block;
     position: relative;
+    margin-top: 10px;
 }
 
 .nav-item{
@@ -83,7 +84,7 @@
 }
 
 .nav-item:hover{
-color: #c494fc;
+color: #D0A5C0;
 }
 
 .footer-container{
@@ -93,26 +94,26 @@ color: #c494fc;
 .mail-footer{
     text-decoration: none;
     color:#FFFFFF;
-    font-size: 26px;
+    font-size: 12px;
     display: block;
     margin-bottom: 12px;
     font-weight: bold;
 }
 
 .mail-footer:hover{
-    color:#c494fc;
+    color:#D0A5C0;
     text-decoration: none;
 }
 
 .footer-title-h3{
     margin-bottom: 12px;
-    font-size: 28px;
+    font-size: 12px;
     font-weight: 900;
     color: white;
     font-family: "Muli", sans-serif;
 }
 .footer-title-h3::after{
-    background-color: #c494fc;
+    background-color: #D0A5C0;
     content: "";
     display: block;
     width: calc(50%);
@@ -143,7 +144,7 @@ color: #c494fc;
 
 .consumer{
     font-size: 12px;
-    text-align: left;    
+    text-align: left;
 }
 
 .consumer-link{
@@ -156,6 +157,12 @@ color: #c494fc;
     width: 60px;
     height: 40px;
 }
+
+.img-logo{
+    width: 164px;
+    height: 75px;
+}
+
 .icon-logo{
     width: 32px;
     height: 20px;
@@ -169,7 +176,7 @@ color: #c494fc;
 }
 
 .social-icon:hover{
-    color:#c494fc;
+    color:#D0A5C0;
 }
 
 
@@ -216,7 +223,7 @@ color: #c494fc;
 }
 
 .a-footer:hover{
-    color:#c494fc;
+    color:#D0A5C0;
     text-decoration: none;
 }
 
@@ -306,6 +313,12 @@ li{
     img{
         width:22%;
     }
+    .footer-title-h3{
+        font-size: 26px;
+    }
+    .mail-footer{
+        font-size: 26px;
+    }
 }
 
 @media(min-width:1200px){
@@ -315,8 +328,13 @@ li{
     img{
         width: 164px;
     }
+    .footer-title-h3{
+        font-size: 26px;
+    }
+    .mail-footer{
+        font-size: 26px;
+    }
 }
-
 
 @keyframes slide {
 	0% { transform: translateX(0); }
@@ -349,7 +367,7 @@ body {
 .wrapper {
 	max-width: 1200px;
 	margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
@@ -463,7 +481,7 @@ body {
 }
 
 .tab-nav-link:hover{
-    color:#c494fc;
+    color:#D0A5C0;
 }
 
 .ul-featured{
