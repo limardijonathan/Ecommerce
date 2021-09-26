@@ -1,5 +1,5 @@
 Hola, somos buenos tintos! un ecommerce dedicado a la venta de vinos. Los que no encontras en el super de tu barrio y tenes que probar. 
-Orientamos nuestro negocio a un publico joven/medio con el cual compartir un poco de esta pasión que es el hermoso mundo del vino.
+Orientamos nuestro negocio a un publico joven/medio, mayores de 18 años, con el cual compartir un poco de esta pasión que es el hermoso mundo del vino.
 
 Nosotros:
 Jonathan Limardi
@@ -48,3 +48,5 @@ De este sitio nos inspiramos en el carrito de compras.
 5)https://frappe.com.ar/
 De este sitio nos inspiramos al publico al que apuntan.
 
+Link al tablero en Trello:
+https://trello.com/b/rzrQbrTJ/ecommerce
