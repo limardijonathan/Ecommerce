@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat" , sans-serif;
+}
+/*estilos del header*/
+#logo{
+    background-color: white
+    
+
+}
+
+.img-logo{
+    width:100%;
+}
+/*estilos del main*/
+.description{
+    display:flex;
+    flex-direction: column;
+     
+}
+.mainbox{
+    display:flex;
+}
+.price {
+    color:#a54076
+}
+.discount {
+    color :cadetblue
+}
+.details {
+    color :darkorchid
+}
+/*estilos de el footer*/
+footer{
+    display: flex;
+    padding: 15px 30px 0px;
+    justify-content: space-between;
+    background-color: #56203d;
+
+}
+.icono{
+    font-size: 25px;
+    padding: 5px;
+}
+
+ul{
+
+    list-style-type: none;
+    line-height: 20px;
+    
+}
+a{
+    color:white
+}
+@media (min-width:480px){
+    .img-logo{
+        width: 30%;
+    }
+    
+}
+
+@media(min-width:768px){
+   
+    
+    .img-logo{
+        width:22%;
+    }
+}
+
+@media(min-width:1200px){
+    #main-box{
+        width:30%;
+    }
+    .img-logo{
+        width: 15%;
+    }
+}
