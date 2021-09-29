@@ -84,7 +84,7 @@
 }
 
 .nav-item:hover{
-color: #D0A5C0;
+    color: #D0A5C0;
 }
 
 .footer-container{
@@ -158,10 +158,7 @@ color: #D0A5C0;
     height: 40px;
 }
 
-.img-logo{
-    width: 164px;
-    height: 75px;
-}
+
 
 .icon-logo{
     width: 32px;
@@ -188,23 +185,7 @@ color: #D0A5C0;
     font-size: 14px;
     font-weight: bold;
 }
-.row-footer{
-    display: flex;
-    padding: 15px 20px 0px;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
-    align-content: center;
-}
-.row-footer-end{
-    display: flex;
-    padding: 15px 20px 0px;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
-    align-content: center;
-    margin-top: 20px;
-}
+
 .created-by{
     margin-top: 10px;
     font-size: 12px;
@@ -216,10 +197,6 @@ color: #D0A5C0;
     color:white;
     text-decoration: none;
     font-size: 14px;
-}
-
-.div-containter-footer{
-    width: 33%;
 }
 
 .a-footer:hover{
@@ -289,6 +266,34 @@ li{
     color: black;
 }
 
+@media (min-width:320px){
+    .nav-desktop{
+        display: none;
+    }
+    .burger-menu{
+        text-align: center;
+    }
+    .img-logo{
+        width: 77px;
+        height: 47px;
+    }   
+    .div-containter-footer{
+        width: 100%;
+    }
+    .row-footer{
+        flex-direction: column;
+        padding-left: 10px;
+        margin-top: 25px;
+        padding-top: 30px;
+
+    }
+    .row-footer-end{
+        margin-top: 25px;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+}
+
 
 
 @media (min-width:480px){
@@ -317,7 +322,46 @@ li{
         font-size: 26px;
     }
     .mail-footer{
-        font-size: 26px;
+        font-size: 20px;
+    }
+
+    .nav-desktop{
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        margin-top: 10px;
+    }
+    .burger-menu{
+     display: none;   
+    }
+    .img-logo{
+        width: 164px;
+        height: 75px;
+    }
+    .div-containter-footer{
+        width: 33%;
+    }
+
+    .row-footer{
+        display: flex;
+        padding: 15px 20px 0px;
+        justify-content: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+        align-content: center;
+        flex-direction: row;
+
+    }
+    .row-footer-end{
+        display: flex;
+        padding: 15px 20px 0px;
+        justify-content: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+        align-content: center;
+        margin-top: 20px;
+        flex-direction: row;
+
     }
 }
 
@@ -498,8 +542,4 @@ body {
 
 .article-products{
     width: 22%;
-}
-
-.footer-payments-shipping-logos{
-    margin-bottom: 50px;
 }
