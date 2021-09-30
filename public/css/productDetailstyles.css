@@ -61,16 +61,7 @@ ul{
 a{
     color:white
 }
-<<<<<<< HEAD
 @media (min-width:380px){
-=======
-
-.div-img-content{
-    align-self: center;
-}
-
-@media (min-width:480px){
->>>>>>> 27c58bbd016f803d3ba9063d8e6aa27fee9a7696
     .img-logo{
         width: 30%;
     }
