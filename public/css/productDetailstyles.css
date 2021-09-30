@@ -18,7 +18,13 @@
 .description{
     display:flex;
     flex-direction: column;
-     
+     width:50%;
+}
+.img-productcontainer{
+    width:50%;
+}
+.img-productcontainer img{
+    width:100%;
 }
 .mainbox{
     display:flex;
@@ -31,6 +37,9 @@
 }
 .details {
     color :darkorchid
+}
+.element.style {
+    display: inline-block;
 }
 /*estilos de el footer*/
 footer{
@@ -54,7 +63,7 @@ ul{
 a{
     color:white
 }
-@media (min-width:480px){
+@media (min-width:380px){
     .img-logo{
         width: 30%;
     }
