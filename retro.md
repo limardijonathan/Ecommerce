@@ -7,7 +7,7 @@
 3. Continuar haciendo.
   - Consensuar cambios con el equipo
 4. Hacer menos.
-  - 
+  - No comunicar trabas en el desarrollo a tiempo.
 5. Dejar de hacer.
   - No juntarse 
   - No responder los msg de slack
