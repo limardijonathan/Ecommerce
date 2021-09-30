@@ -30,3 +30,14 @@ app.get('/productDetail', (req,res) =>{
 app.get('/home', (req,res) =>{
     res.sendFile(path.join(__dirname,'/views/home.html'))
 })
+
+
+
+
+app.post('/login',(req,res)=>{
+    res.redirect("/home")
+})
+
+app.post('/register',(req,res)=>{
+    res.redirect("/home")
+})
