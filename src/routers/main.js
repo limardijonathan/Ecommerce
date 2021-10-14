@@ -10,6 +10,7 @@ router.get('/login',mainController.login)
 router.get('/productCart',mainController.productCart)
 router.get('/productDetail',mainController.productDetail)
 router.get('/addProduct',mainController.addProduct)
+router.get('/productList',mainController.listProduct)
 
 
 module.exports=router

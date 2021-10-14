@@ -17,6 +17,8 @@ const mainControler={
         res.render("productDetail")
     },addProduct:(req,res) =>{
         res.render("addProduct")
+    },listProduct:(req,res) =>{
+        res.render("productList")
     }
 }
 
