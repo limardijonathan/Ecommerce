@@ -15,7 +15,9 @@ const mainControler={
         res.render("productCart")
     },productDetail:(req,res)=>{
         res.render("productDetail")
-    },
+    },addProduct:(req,res) =>{
+        res.render("addProduct")
+    }
 }
 
 module.exports= mainControler
