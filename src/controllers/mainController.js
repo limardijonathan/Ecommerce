@@ -3,22 +3,22 @@ const express=require("express");
 
 const mainControler={
     home:(req,res)=>{
-        res.render("home")
+        res.render("index/home.ejs")
     },
     register:(req,res)=>{
-        res.render("register")
+        res.render("users/register.ejs")
     },
     login:(req,res)=>{
-        res.render("login")
+        res.render("users/login.ejs")
     },
     productCart:(req,res)=>{
-        res.render("productCart")
+        res.render("products/productCart.ejs")
     },productDetail:(req,res)=>{
-        res.render("productDetail")
+        res.render("products/productDetail.ejs")
     },addProduct:(req,res) =>{
-        res.render("addProduct")
+        res.render("products/addProduct.ejs")
     },listProduct:(req,res) =>{
-        res.render("productList")
+        res.render("products/productList.ejs")
     }
 }
 
