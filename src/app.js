@@ -5,12 +5,12 @@ const app =express()
 let path = require('path')
 
 app.set("view engine", "ejs")
-app.set("views", path.join(__dirname, "./src/views"))
+app.set("views", path.join(__dirname, "./views"))
 
-const publicPath = path.join(__dirname,'./public')
+const publicPath = path.join(__dirname,'../public')
 app.use(express.static(publicPath))
 
-const mainRouter =require("./src/routers/main")
+const mainRouter =require("./routers/main")
 app.listen(5050, ()=>{
     console.log('funciona en http://localhost:5050/' )
 })
