@@ -17,8 +17,12 @@ const mainControler={
         res.render("products/productDetail.ejs")
     },addProduct:(req,res) =>{
         res.render("products/addProduct.ejs")
+    },editProduct:(req,res) =>{
+        res.render("products/editProduct.ejs")
     },listProduct:(req,res) =>{
         res.render("products/productList.ejs")
+    },redirect: (req,res)=>{
+        res.redirect("/")
     }
 }
 
