@@ -7,212 +7,13 @@
 }
 
 
-.container-header{
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
-.subcontainer-header{
-    display: flex;
-    padding: 15px 20px 0px;
-    justify-content: space-between;   
-    align-content: center;
-}
-
-.section-advertising{
-    background-color: #272727;
-    color: #FFFFFF;
-    text-align: center!important;
-    font-size: 14px;
-    padding: 5px;
-}
-
-.svg-buscar{
-    height: 40px;
-    width:30px;
-    position: absolute;
-    padding-top: 8px;
-}
-
-.svg{
-    height: 40px;
-    width:30px;
-}
-
-.search{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.form-search{
-   display: inline-block;
-   width: 100%;
-}
-
-.search-input-submit{
- 
-}
-.search-input{
-    font-size: 11px;
-    display: inline;
-    padding: 12px;
-    width: 80%;
-    border: 0;
-    background-color: rgba(39, 39, 39, 0.1);
-    /* Hack to avoid autozoom on IOS */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: #272727;
-    border-radius: 6px;
-}
-
-#logo{
-    background-color:#FFFFFF; 
-}
-
-.nav-desktop{
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    margin-top: 10px;
-}
-
-.nav-item{
-    display: inline-block;
-    padding: 0px 15px;
-}
-
-.nav-item:hover{
-    color: #D0A5C0;
-}
-
-.footer-container{
-    background-color: rgba(39, 39, 39, 0.8);
-    color: rgba(255, 255, 255, 0.8);
-}
-.mail-footer{
-    text-decoration: none;
-    color:#FFFFFF;
-    font-size: 12px;
-    display: block;
-    margin-bottom: 12px;
-    font-weight: bold;
-}
-
-.mail-footer:hover{
-    color:#D0A5C0;
-    text-decoration: none;
-}
-
-.footer-title-h3{
-    margin-bottom: 12px;
-    font-size: 12px;
-    font-weight: 900;
-    color: white;
-    font-family: "Muli", sans-serif;
-}
-.footer-title-h3::after{
-    background-color: #D0A5C0;
-    content: "";
-    display: block;
-    width: calc(50%);
-    height: 10px;
-    left: -5px;
-}
-
-.email-input{
-    font-size: 11px;
-    display: inline;
-    padding: 12px;
-    width: 80%;
-    border: 0;
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Hack to avoid autozoom on IOS */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: #272727;
-    border-radius: 6px;
-}
-
-.Copyright{
-    margin-bottom: 10px;
-    font-size: 12px;
-    text-align: center;
-}
-
-.consumer{
-    font-size: 12px;
-    text-align: left;
-}
-
-.consumer-link{
-    display: inline;
-    text-decoration: none;
-    color: white;
-    font-weight: 900;
-}
-.footer-logo{
-    width: 60px;
-    height: 40px;
-}
-
-
-
-.icon-logo{
-    width: 32px;
-    height: 20px;
-    border-radius: 3px;
-    margin: 5px;
-    max-height: 20px;
-    width: auto;
-}
-.social-icon{
-    color:white;
-}
-
-.social-icon:hover{
-    color:#D0A5C0;
-}
-
-
-.footer-p{
-    margin-bottom: 12px;
-}
-.title-footer{
-    margin-bottom: 12px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.created-by{
-    margin-top: 10px;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 900;
-}
-
-.a-footer{
-    color:white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.a-footer:hover{
-    color:#D0A5C0;
-    text-decoration: none;
-}
-
-.footer-menu-item{
-    margin-bottom: 12px;
-}
 
 img{
     width:100%;
 }
 
-
+/* 
 #main-box{
     margin:auto;
     width:65%;
@@ -250,49 +51,16 @@ button{
     border-radius: 5px;
     background-color: #d0a5c0;
 
-}
+} */
 
-.icono{
-    font-size: 20px;
-}
 
-ul{
 
-    list-style-type: none;
-    
-}
 
 li{
     color: black;
 }
 
-@media (min-width:320px){
-    .nav-desktop{
-        display: none;
-    }
-    .burger-menu{
-        text-align: center;
-    }
-    .img-logo{
-        width: 77px;
-        height: 47px;
-    }   
-    .div-containter-footer{
-        width: 100%;
-    }
-    .row-footer{
-        flex-direction: column;
-        padding-left: 10px;
-        margin-top: 25px;
-        padding-top: 30px;
 
-    }
-    .row-footer-end{
-        margin-top: 25px;
-        flex-direction: column;
-        padding-left: 10px;
-    }
-}
 
 
 
@@ -306,9 +74,6 @@ li{
     input{
         width: 215px;
     }
-    .search{
-      width: 500px;
-    }
 }
 
 @media(min-width:768px){
@@ -318,51 +83,9 @@ li{
     img{
         width:22%;
     }
-    .footer-title-h3{
-        font-size: 26px;
-    }
-    .mail-footer{
-        font-size: 20px;
-    }
-
-    .nav-desktop{
-        width: 100%;
-        display: inline-block;
-        position: relative;
-        margin-top: 10px;
-    }
-    .burger-menu{
-     display: none;   
-    }
-    .img-logo{
-        width: 164px;
-        height: 75px;
-    }
-    .div-containter-footer{
-        width: 33%;
-    }
-
-    .row-footer{
-        display: flex;
-        padding: 15px 20px 0px;
-        justify-content: space-between;
-        margin-left: 15px;
-        margin-right: 15px;
-        align-content: center;
-        flex-direction: row;
-
-    }
-    .row-footer-end{
-        display: flex;
-        padding: 15px 20px 0px;
-        justify-content: space-between;
-        margin-left: 15px;
-        margin-right: 15px;
-        align-content: center;
-        margin-top: 20px;
-        flex-direction: row;
-
-    }
+    
+    
+    
 }
 
 @media(min-width:1200px){
@@ -372,12 +95,7 @@ li{
     img{
         width: 164px;
     }
-    .footer-title-h3{
-        font-size: 26px;
-    }
-    .mail-footer{
-        font-size: 26px;
-    }
+  
 }
 
 @keyframes slide {

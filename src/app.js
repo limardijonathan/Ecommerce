@@ -17,6 +17,9 @@ app.listen(5050, ()=>{
 
 app.use("/", mainRouter)
 
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
 
 app.post('/login',(req,res)=>{
     res.redirect("/home")
