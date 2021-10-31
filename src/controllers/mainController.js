@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-
-
 const express=require("express");
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -20,14 +18,21 @@ const mainControler={
     productCart:(req,res)=>{
         res.render("products/productCart.ejs")
     },productDetail:(req,res)=>{
-        res.render("products/productDetail.ejs")
+        const id = req.params.id;    
+        const product = products.find(product =>{
+			return product.id == id
+		})
+
+        res.render("products/productDetail.ejs",{
+            productSent: product
+        })
     },addProduct:(req,res) =>{
         res.render("products/addProduct.ejs")
     },editProduct:(req,res) =>{
         res.render("products/editProduct.ejs")
     },listProduct:(req,res) =>{
         res.render("products/productList.ejs",
-        {productSent: porduct})
+        {productsSent: products})
     },
     redirect: (req,res)=>{
         res.redirect("/")

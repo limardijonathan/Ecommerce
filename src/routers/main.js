@@ -14,7 +14,7 @@ router.get('/login',mainController.login)
 
 router.post('/login',mainController.redirect)
 router.get('/productCart',mainController.productCart)
-router.get('/productDetail',mainController.productDetail)
+router.get('/productDetail/:id',mainController.productDetail)
 router.get('/addProduct',mainController.addProduct)
 router.get('/editProduct',mainController.editProduct)
 router.get('/productList',mainController.listProduct)
