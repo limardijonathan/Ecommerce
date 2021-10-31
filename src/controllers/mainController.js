@@ -1,5 +1,11 @@
-const express=require("express");
+const fs = require('fs');
+const path = require('path');
 
+
+
+const express=require("express");
+const productsFilePath = path.join(__dirname, '../data/productsData.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainControler={
     home:(req,res)=>{
@@ -20,8 +26,10 @@ const mainControler={
     },editProduct:(req,res) =>{
         res.render("products/editProduct.ejs")
     },listProduct:(req,res) =>{
-        res.render("products/productList.ejs")
-    },redirect: (req,res)=>{
+        res.render("products/productList.ejs",
+        {productSent: porduct})
+    },
+    redirect: (req,res)=>{
         res.redirect("/")
     }
 }
