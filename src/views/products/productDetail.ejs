@@ -7,21 +7,23 @@
             <div class="mainbox">
                 <div class="description"> 
                     <div>
-                        <h2>COMBO MALBEC MENDOCINO x 3</h2>
+                        <h2><%= productSent.productName%></h2>
                         <br>
-                        <h4>Inicio . Sets de Vinos . 3 vinos . Tintos . Combo Malbec Mendocino x 3</h4>
+                       
                     </div>
                     <div>  
                         <h1 class = "price"><%= productSent.productPrice %></h1>
-                        <h3 class = "discount">¡15% OFF comprando 1 o más!</h3>
+                        <% if(productSent.productOffer){%>
+                            <h3 class = "discount"><%= productSent.productDiscount%>%off</h3>
+                        <%}%>
                         <br>
                         <br>
-                        <h4>Válido para este producto y todos los de la categoría: Sets de Vinos -> 3 vinos.
-                            Podés combinar esta promoción con otros productos de la misma categoría.</h4>
+                        <h4><%= productSent.productDescription%></h4>
                             <br>
-                        <h3>18 cuotas de $291,87</h3>
+                         
+                        <h3>hasta en 18 cuotas</h3>
                         <br>
-                        <h4 class = "details">Ver mas detalles</h4>
+                        
                         <br>
                     </div>
                     <div>
@@ -33,12 +35,12 @@
                     </div>
                         <br>
                         <br>
-                        <H4>El combo Malbec Mendocino x 3 está compuesto por 3 vinos:</H4>
+                        
                     </div>
 
                 </div>
                 <div class = "img-productcontainer">
-                    <img src="/img/malbec-mendocino1.png" alt="">
+                    <img src=<%=productSent.productImage%> alt="no">
                 </div>
             </div>
         </main>

@@ -75,24 +75,27 @@
     }
     .img-productcontainer{
         width:60%;
+        text-align: center;
     }
     .mainbox{
         display:flex;
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: nowrap;
+       
+        
 
     }
+    .img-productcontainer img{
+        width:65%;
+        text-align: center;}
    
-    
-    
-
 }
 
 @media(min-width:1200px){
     #main-box{
         width:30%;
     }
+}
        
     
-}
