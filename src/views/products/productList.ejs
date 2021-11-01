@@ -20,136 +20,19 @@
             </div>
             <div class="section-product">
                 <div class="products">
+                    <% productsSent.forEach(producto => { %> 
                     <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                            <img src="img/vino1.jpg" alt="Anko Malbec" class="product_img">
+                        <a style="text-decoration: none;color: #000000;" href="/productDetail/<%= producto.id %>">
+                            <img src="<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
                             <div class="main-article">
-                                <p class="price">$1220</p>
-                                <p class="discount">15% off</p>
-                                <h4 class="description">Anko Malbec</h4>
+                                <p class="price"><%= producto.productPrice %></p>
+                                <p class="discount"><%= producto.productDiscount %></p>
+                                <h4 class="description"><%= producto.productName %></h4>
                             </div>
                         </a>
                     </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/vino2.jpg" alt="Manos Negras" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$1230</p>
-                            <p class="discount">20% off</p>
-                            <h4 class="description">Manos Negras</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/vino3.png" alt="Saurus Pinot Noir" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$580</p>
-                            <p class="discount">10% off</p>
-                        <h4 class="description">Saurus Pinot Noir</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/vino4.jpg" alt="El Porvenir - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$950</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">El Porvenir - Cabernet
-                                Sauvignon</h4>
-                        </div>
-                        </a>
-                    </article>
-                </div> 
-                <div class="products">
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/saurus-select-cabernet-sauvignon.png" alt="Saurus - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$750</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Saurus - Cabernet
-                                Sauvignon</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/niven-cabernet-sauvignon1.jpg" alt="Niven - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$950</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Niven Cabernet Sauvignon</h4>
-                        </a>                        
-                        </div>
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/taymante-tardio.jpg" alt="taymante-tardio" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$450</p>
-                            <p class="discount">15% off</p>
-                            <h4 class="description">Taymante - Tardio
-                                </h4>
-                        </div>
-                        </a>                        
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/zaha-cabernet-sauvignon1.jpg" alt="zaha - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$1950</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Zaha - Cabernet
-                                Sauvignon</h4>
-                        </div>
-                        </a>                        
-                    </article>
-                </div>
-                <div class="products">
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/aguijon-de-abeja-obrera-cabernet-sauvignon1.png" alt="aguijon de abeja - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$950</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Aguijon de abeja - Cabernet sauvignon</h4>
-                        </div>
-                        </a>                        
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/animal-extra-brut1-.jpg" alt="Animal extra brut" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$1250</p>
-                            <p class="discount">15% off</p>
-                            <h4 class="description">Animal Extra brut</h4>
-                        </div>
-                        </a>                        
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/crios-cabernet-sauvignon1-.jpg" alt="Crios - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$950</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Crios - Cabernet
-                                Sauvignon</h4>
-                        </div>
-                        </a>
-                    </article>
-                    <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail">
-                        <img src="img/cruzat-naranjo1-.png" alt="El Porvenir - Cabernet Sauvignon" class="product_img">
-                        <div class="main-article">
-                            <p class="price">$440</p>
-                            <p class="discount">25% off</p>
-                            <h4 class="description">Cruzat Naranjo</h4>
-                        </div>
-                        </a>
-                    </article>
-                </div>
+                    <% }) %>                     
+                </div>                
             </div>
         </section>
     </main>
