@@ -1,0 +1,202 @@
+[
+    {
+       "id":1,
+       "productName":"Anko Malbec",
+       "productDescription":"Aromas florales y especiados, sabores a frutas negras, fácil de tomar, muy bien balanceado.",
+       "productImage":"/img/products/anko-malbec.jpg",
+       "productPrice":"1.200,00",
+       "productCategory":"Tintos",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":2,
+       "productName":"Manos Negras",
+       "productDescription":"El Malbec es indiscutiblemente, la uva emblemática de Argentina. El oasis desértico de altitud de Mendoza ha proporcionado las condiciones ideales para que esta uva despliegue sus puntos fuertes como en ningún otro lugar del mundo. Los días de sol brillante dan un color negruzco y sabores de fruta oscura, mientras que las noches frescas de la montaña producen aromas a violeta y una textura suave y flexible.",
+       "productImage":"/img/products/manos-negras-malbec1-.png",
+       "productPrice":"$1.145,00",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":3,
+       "productName":"Saurus Pinot Noir",
+       "productDescription":"Es un vino del estilo de la Provence, región del sur de Francia reconocida por ser la cuna de los rosé más prestigiosos, de un perfil que expresa suavidad y frescura. Su delicado color rosa pálido está asociado a la elaboración de maceración corta. Se destaca su viva acidez, fluidez y amabilidad. Fácil de beber.",
+       "productImage":"/img/products/saurus-estate-pinot-rose.png",
+       "productPrice":"$750,00",
+       "productCategory":"Rosados",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":4,
+       "productName":"El Porvenir - Cabernet Sauvignon",
+       "productDescription":"Color: rojo rubí intenso con tonalidades violáceas que lo hacen un vino vivaz y expresivo. Aroma: frutos rojos, casis y pimienta negra. Boca: con una entrada amable de taninos dulces, de excelente acidez, bien fluido, con largo final y persistente. Guarda de botella: es un vino que permitirá, por su estructura, una guarda de hasta 4 años.",
+       "productImage":"/img/products/el-porvenir-amauta-absoluto-malbec1.jpg",
+       "productPrice":"$950,00",
+       "productCategory":"Tintos",
+       "productOffer":false,
+       "productDiscount": 0
+    },
+    {
+       "id":5,
+       "productName":"Saurus Cabernet Sauvignon",
+       "productDescription":"A la vista presenta color rojo granate muy intenso que denota su madurez. En nariz es complejo, se combinan aromas de frutos rojos maduros, pimienta negra y especias. Su paso por roble aporta notas de chocolate y moka. En boca tiene muy buena entrada, con taninos dulces, intensos y bien equilibrados. Es un vino persistente, elegante y de buena acidez.",
+       "productImage":"/img/saurus-select-cabernet-sauvignon.png",
+       "productPrice":"$1.150,00",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":6,
+       "productName":"Niven Cabernet Sauvignon",
+       "productDescription":"Color Rubí oscuro, con notas frutadas en nariz. Buena estructura en boca, buena acidez, final medio.",
+       "productImage":"/img/niven-cabernet-sauvignon1.jpg",
+       "productPrice":"$660,00",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":7,
+       "productName":"Taymante - Tardio",
+       "productDescription":"Color: Amarillo-dorado (miel). Aromas: a frutos tropicales y cítricos. Temperatura: beberse a 7ºC en copa tipo jerez.",
+       "productImage":"/img/products/taymante-tardio.jpg",
+       "productPrice":"$650,00",
+       "productCategory":"Dulces",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":8,
+       "productName":"Zaha - Cabernet Sauvignon",
+       "productDescription":"Tinto astringente, de sabor a uva fresca. Temperatura: bebese a 10°c en copa",
+       "productImage":"/img/zaha-cabernet-sauvignon1.jpg",
+       "productPrice":"$1.440,00",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":5
+    },
+    {
+       "id":9,
+       "productName":"Aguijon de Abeja - Cabernet Sauvignon",
+       "productDescription":"Los aromas de cereza negra, frutos rojos, fruta morada y corteza oscura se combinan con pimienta blanca triturada y sal. De cuerpo medio a completo con taninos ligeramente masticables y un final sabroso.",
+       "productImage":"/img/aguijon-de-abeja-obrera-cabernet-sauvignon1.png",
+       "productPrice":"$978,00",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":10,
+       "productName":"Animal Extra Brut",
+       "productDescription":"Extra brut de caracter fuerte. Beber a 5°c en copa",
+       "productImage":"/img/animal-extra-brut1-.jpg",
+       "productPrice":"$650,03",
+       "productCategory":"Espumantes",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":11,
+       "productName":"Crios - Cabernet Sauvignon",
+       "productDescription":"Color rojo intenso con aromas a ciruela madura, cerezas y notas a vainilla. En boca, aromas a frutos negros, pimienta negra y cassis están combinados armoniosamente. Los taninos maduros y vibrantes proporcionan una elegante estructura y un final largo y persistente.",
+       "productImage":"/img/crios-cabernet-sauvignon1-.jpg",
+       "productPrice":"$865,97",
+       "productCategory":"Tintos",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":12,
+       "productName":"Cruzat - Naranjo",
+       "productDescription":"Cruzat Naranjo es un espumante de uvas blancas con alma de tinto; es un vino espumoso obtenido a través de la maceración de uva Chardonnay -provenientes de Luján de Cuyo- fermentado con levaduras indígenas y con sus pieles, tal como se elaboran los vinos tintos. Es el primer y único vino espumoso naranjo del mercado argentino elaborado bajo método tradicional. Su elaboración está inspirada en técnicas ancestrales para alcanzar una extraordinaria concentración de color, aromas y sabores.",
+       "productImage":"/img/cruzat-naranjo1-.png",
+       "productPrice":"$1.250,19",
+       "productCategory":"Espumantes",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":13,
+       "productName":"Tercos - Bonarda",
+       "productDescription":"Vino color violáceo de gran intensidad. Sobresale la característica frutada de los aromas, donde predominan los de tipo frutos rojos, y cerezas. En boca es un vino de mediano volumen, suaves taninos y larga persistencia, pero manteniendo esa suavidad propia de la variedad.",
+       "productImage":"/img/products/tercos-bonarda1.png",
+       "productPrice":"$1.336,08",
+       "productCategory":"Tintos",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":14,
+       "productName":"Paso a Paso",
+       "productDescription":"De color violáceo profundo bien característico de la cepa, en nariz despliega una paleta aromática que va desde la fruta fresca hasta los herbáceos pasando por notas especiadas y un fondo ahumado. Tiene una entrada dulce y una acidez vibrante, sus taninos son dulces. Gran persistencia y retrogusto especiado.",
+       "productImage":"/img/products/paso-a-paso-criolla-blanco1.jpg",
+       "productPrice":"$1.112,35",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":15,
+       "productName":"Alma gemela",
+       "productDescription":"Intenso color rubí con tonos violetas. Aromas especiados nos recuerdan a aromas primarios como frutas rojas, mora y casis con un final largo. Un vino de gran balance en boca con una atractiva frescura, cuerpo medio y taninos suaves.",
+       "productImage":"/img/products/alma-gemela-bonarda1.jpg",
+       "productPrice":"$1.190,83",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":16,
+       "productName":"El Enemigo - Bonarda",
+       "productDescription":"Composicion Varietal: 85% Bonarda - 15% Cabernet Franc. Crianza: 18 meses en barricas, 70% de roble francés (2 y 3 uso) y 30% en roble americano",
+       "productImage":"/img/products/el-enemigo-bonarda1.jpg",
+       "productPrice":"$2.231,00",
+       "productCategory":"",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":17,
+       "productName":"Saurus Select Merlot",
+       "productDescription":"A la vista presenta color rojo rubí brillante e intenso. A la nariz se perciben frutos rojos, sutil dejo floral y diversas especias como anís, menta fresca y pimienta, acompañadas con elegantes notas de vainilla y moka aportadas por la madera. En boca es muy complejo, se perciben taninos amables, acidez moderada y fruta madura. Es un vino equilibrado y fácil de beber.",
+       "productImage":"/img/saurus-select-cabernet-sauvignon.png",
+       "productPrice":"$699,86",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":18,
+       "productName":"Desierto 25 - Merlot",
+       "productDescription":"Color rojo bordó con tonos violáceos. En nariz se perciben frutos rojos maduros (ciruela y moras) y algunas notas de higos. En boca tiene cuerpo y volumen, con taninos bien redondos y un buen balance de acidez que lo hace fluido sin perder vigor ni personalidad.",
+       "productImage":"/img/products/desierto-25-merlot1.jpg",
+       "productPrice":"$723,53",
+       "productCategory":"Tintos",
+       "productOffer":true,
+       "productDiscount":15
+    },
+    {
+       "id":19,
+       "productName":"Prodigo - Torrontes",
+       "productDescription":"De color amarillo cristalino. En nariz se detectan aromas intensos a frutos cítricos, flores de naranja y jazmín. En boca se presenta muy aromático con finas notas minerales y agradable acidez. Persistente y elegante final. Sugerencias gastronómicas: Se presta para acompañar con “carpaccio” y comida oriental. Ideal con platos a base de langostinos y centolla.",
+       "productImage":"/img/products/prodigo-torrontes1.png",
+       "productPrice":"$646,45",
+       "productCategory":"Blancos",
+       "productOffer":false,
+       "productDiscount":0
+    },
+    {
+       "id":20,
+       "productName":"Anko - Torrontes",
+       "productDescription":"Aromas florales, principalmente jazmín. Perfil de cítricos en compañía de una acidez natural que le dan un acabado brillante y limpio.",
+       "productImage":"/img/products/anko-torrontes1.jpg",
+       "productPrice":"$896,59",
+       "productCategory":"Blancos",
+       "productOffer":true,
+       "productDiscount":15
+    }
+ ]

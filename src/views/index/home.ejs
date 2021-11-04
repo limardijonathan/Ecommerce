@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include ('../partials/head') %>
-    <link href="/css/homestyles.css" rel="stylesheet">
-    <title>Home</title>
-</head>
+    <%- include ('../partials/head', {title:"Bienvenido a Buenos Tintos", css:"homestyles"}) %>
 <body>
     <%- include ('../partials/header') %>
     <main>
@@ -70,30 +66,37 @@
         <div class="section-product">
             <div class="products">
                 <article class="article-products">
+                  <a style="text-decoration: none;color: #000000;" href="/productDetail">
                     <img src="img/vino1.jpg" alt="Anko Malbec" class="product_img">
                     <div class="main-article">
                         <p class="price">$1220</p>
                         <p class="discount">15% off</p>
                         <h4 class="description">Anko Malbec</h4>
                     </div>
+                  </a>
                 </article>
                 <article class="article-products">
-                    <img src="img/vino2.jpg" alt="Manos Negras" class="product_img">
-                    <div class="main-article">
-                        <p class="price">$1230</p>
-                        <p class="discount">20% off</p>
-                        <h4 class="description">Manos Negras</h4>
-                    </div>
+                    <a style="text-decoration: none;color: #000000;" href="/productDetail">
+                      <img src="img/vino2.jpg" alt="Manos Negras" class="product_img">
+                      <div class="main-article">
+                          <p class="price">$1230</p>
+                          <p class="discount">20% off</p>
+                          <h4 class="description">Manos Negras</h4>
+                      </div>
+                    </a>
                 </article>
                 <article class="article-products">
+                  <a style="text-decoration: none;color: #000000;" href="/productDetail">
                     <img src="img/vino3.png" alt="Saurus Pinot Noir" class="product_img">
                     <div class="main-article">
                         <p class="price">$580</p>
                         <p class="discount">10% off</p>
                     <h4 class="description">Saurus Pinot Noir</h4>
                     </div>
+                  </a>
                 </article>
                 <article class="article-products">
+                  <a style="text-decoration: none;color: #000000;" href="/productDetail">
                     <img src="img/vino4.jpg" alt="El Porvenir - Cabernet Sauvignon" class="product_img">
                     <div class="main-article">
                         <p class="price">$950</p>
@@ -101,6 +104,7 @@
                         <h4 class="description">El Porvenir - Cabernet
                              Sauvignon</h4>
                     </div>
+                  </a>
                 </article>
             </div>  
         </div>

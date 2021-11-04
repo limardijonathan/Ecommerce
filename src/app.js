@@ -14,8 +14,12 @@ const mainRouter =require("./routers/main")
 app.listen(5050, ()=>{
     console.log('funciona en http://localhost:5050/' )
 })
-
+const methodOverride=require("method-override")
+app.use (methodOverride("_method"))
 app.use("/", mainRouter)
+
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
 
 
 app.post('/login',(req,res)=>{

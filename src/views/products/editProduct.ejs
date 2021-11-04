@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head', {title:"Editar Producto", css:"addProduct"}) %>   
+<body>
+    <%- include ('../partials/header') %>
+    <main>
+        <div id="main-box" >    
+            <form action="editProduct/<%= productSent.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                <div>
+                    <h2>
+                        ¡Edita un producto!
+                    </h2>
+                </div>
+                <div class="info">
+                    <label for="Product-name">Nombre del Producto</label><br/>
+                    <input type="text" name="productName" value="<%= productSent.productName%>" id="name" required>
+                </div>
+                <div class="info">
+                    <label for="description">Descripcion del producto</label><br/>
+                    <textarea name="description" ><%=productSent.productDescription%></textarea>
+                </div>
+                <div class="info">
+                    <label for="img">Imagen del Producto:</label><br/>
+                    <input name="img-product" type="file" id="img" accept=".jpg,.png">
+                </div>
+               
+                <div class="info" >
+                    <label>Categoria del producto:</label><br>
+                    <div id="information">
+                  <label class="label-info"><input type="checkbox" name="category" value="set-de-vinos"class="option">set de vinos</label><br>
+                  <label class="label-info"><input type="checkbox" name="category" value="tintos" class="option">Tintos</label><br>
+                  <label class="label-info"><input type="checkbox" name="category" value="blancos" class="option">Blancos</label><br>
+                  <label class="label-info"><input type="checkbox" name="category" value="rosados" class="option">Rosados</label><br>
+                  <label class="label-info"><input type="checkbox" name="category" value="dulces" class="option">Dulces</label><br>
+                  <label class="label-info"><input type="checkbox" name="category" value="espumantes" class="option">Espumantes</label><br>
+                </div>
+                </div>
+                <div class="info">
+                    <label for="price">Precio:</label><br/>
+                    <input name="price" type="text" id="price" value= <%= productSent.productPrice%> required >
+                </div>
+                <div class="info">
+                    <label>¿esta de oferta?</label><br>
+                    <div id="information">
+                        <label class="label-info"><input type="checkbox" name="discount" value="si"class="option">si contiene oferta</label><br>
+                        <label class="label-info"><input type="checkbox" name="discount" value="no" class="option">no contine oferta</label><br>
+                    </div>
+                    <br>
+                    <label for="off">procentaje de oferta en caso de tenerlo</label><br/>
+                    <input name="off" type="number" id="off" value= <%= productSent.productDiscount%> required >
+                </div>
+                <div id="button">
+                    <button type="submit">Agregar Producto</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <%- include ('../partials/footer') %>
+</body>
+</html>
