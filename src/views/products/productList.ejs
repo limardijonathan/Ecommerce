@@ -25,8 +25,12 @@
                         <a style="text-decoration: none;color: #000000;" href="/productDetail/<%= producto.id %>">
                             <img src="<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
                             <div class="main-article">
+                                <% if (producto.productDiscount == 0 ){ %>
                                 <p class="price"><%= producto.productPrice %></p>
-                                <p class="discount"><%= producto.productDiscount %></p>
+                                <% } else{ %>
+                                <p class="price"><%= producto.productPrice%>  -  <%= producto.productDiscount%> %OFF</p>
+                                <%} %>
+                                <p class="discount"></p>
                                 <h4 class="description"><%= producto.productName %></h4>
                             </div>
                         </a>
