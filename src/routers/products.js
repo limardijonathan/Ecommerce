@@ -16,15 +16,12 @@ const storage = multer.diskStorage({
 const upload = multer({storage})
 const mainController=require("../controllers/mainController")
 
-router.get('/',mainController.home)
-router.get('/register',mainController.register)
-
-
-router.post('/register',mainController.redirect)
-
-router.get('/login',mainController.login)
-
-router.post('/login',mainController.redirect)
+router.get('/',mainController.listProduct)
+router.get('/productCart',mainController.productCart)
+router.get('/:id',mainController.productDetail)
+router.get('/addProduct',mainController.addProduct)
+router.get('/:id/edit',mainController.editProduct)
+router.put('/:id/edit',upload.single("newProductImage"),mainControler.update); 
 
 
 

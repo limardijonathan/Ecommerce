@@ -11,21 +11,16 @@ const publicPath = path.join(__dirname,'../public')
 app.use(express.static(publicPath))
 
 const mainRouter =require("./routers/main")
+const ProductsRouter =require("./routers/products")
 app.listen(5050, ()=>{
     console.log('funciona en http://localhost:5050/' )
 })
 const methodOverride=require("method-override")
 app.use (methodOverride("_method"))
 app.use("/", mainRouter)
+app.use("/products", ProductsRouter)
 
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 
-app.post('/login',(req,res)=>{
-    res.redirect("/home")
-})
-
-app.post('/register',(req,res)=>{
-    res.redirect("/home")
-})

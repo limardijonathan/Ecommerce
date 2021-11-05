@@ -22,7 +22,7 @@
                 <div class="products">
                     <% productsSent.forEach(producto => { %> 
                     <article class="article-products">
-                        <a style="text-decoration: none;color: #000000;" href="/productDetail/<%= producto.id %>">
+                        <a style="text-decoration: none;color: #000000;" href="/products/<%= producto.id %>">
                             <img src="<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
                             <div class="main-article">
                                 <% if (producto.productDiscount == 0 ){ %>

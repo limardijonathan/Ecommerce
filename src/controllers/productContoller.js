@@ -5,17 +5,8 @@ const express=require("express");
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
-const mainControler={
-    home:(req,res)=>{
-        res.render("index/home.ejs")
-    },
-    register:(req,res)=>{
-        res.render("users/register.ejs")
-    },
-    login:(req,res)=>{
-        res.render("users/login.ejs")
-    },
+const ProductsController={
+   
     productCart:(req,res)=>{
         res.render("products/productCart.ejs")
     },productDetail:(req,res)=>{
@@ -59,7 +50,7 @@ const mainControler={
 			
 		})
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
-		res.redirect("/products")},
+		res.redirect("/productList")},
     listProduct:(req,res) =>{
         res.render("products/productList.ejs",
         {productsSent: products})
@@ -69,4 +60,4 @@ const mainControler={
     }
 }
 
-module.exports= mainControler
+module.exports= ProductsController
