@@ -38,12 +38,12 @@
                         
                     </div>
                     <a href="/products/<%= productSent.id %>/edit">EDITAR PRODUCTO</a>
-                    <form action="/products/delete/<%= productSent.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <form action="/products/<%= productSent.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                     </form>
                 </div>
                 <div class = "img-productcontainer">
-                    <img src=<%=productSent.productImage%> alt="no">
+                    <img src=/img/products/<%=productSent.productImage%> alt="no">
                 </div>
             </div>
         </main>

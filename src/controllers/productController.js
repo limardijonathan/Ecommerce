@@ -50,14 +50,38 @@ const ProductsController={
 			
 		})
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
-		res.redirect("/productList")},
+		res.redirect("/products")},
     listProduct:(req,res) =>{
         res.render("products/productList.ejs",
         {productsSent: products})
     },
     redirect: (req,res)=>{
         res.redirect("/")
-    }
+    },
+    store: (req,res) =>{
+        let newProduct ={
+            id: products[products.length - 1].id + 1, 
+			productName:req.body.productName,
+			productDescription:req.body.productDescription,
+            productImage: req.file.filename,
+			productPrice:req.body.productPrice,
+			productCategory:req.body.productCategory,
+			productOffer:req.body.productOffer,
+            productDiscount: req.body.productDiscount     
+        }
+
+        products.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
+		res.redirect("/products")},
+    destroy:(req,res) =>{
+            let id =req.params.id;
+            let finalProducts = products.filter(product =>{
+                return product.id != id
+            })
+
+            fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts,null, " "))
+            res.redirect("/products")
+        },
 }
 
 module.exports= ProductsController

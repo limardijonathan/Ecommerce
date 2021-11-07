@@ -5,7 +5,7 @@
     <%- include ('../partials/header') %>
     <main>
         <div id="main-box" >    
-            <form action="/register" method="POST"> 
+            <form action="/products" method="POST" enctype="multipart/form-data"> 
                 <div>
                     <h2>
                         ¡Agrega un producto!
@@ -21,7 +21,7 @@
                 </div>
                 <div class="info">
                     <label for="img">Imagen del Producto:</label><br/>
-                    <input name="productImage" type="file" id="img" accept=".jpg,.png" required >
+                    <input name="productImage" type="file" id="img" accept=".jpg,.png"  required >
                 </div>
                
                 <div class="info" >
