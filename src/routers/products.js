@@ -9,20 +9,22 @@ const storage = multer.diskStorage({
         cb(null, "./public/img/products")
     },
     filename:function(req, file, cb){
-        cb (null, Date.now() + file.originalname) //originalname inculye la exten
+        cb (null,  Date.now() + file.originalname) //originalname inculye la exten
     }
 })
 
 const upload = multer({storage})
-const mainController=require("../controllers/mainController")
+const productController=require("../controllers/productController")
 
-router.get('/',mainController.listProduct)
-router.get('/productCart',mainController.productCart)
-router.get('/:id',mainController.productDetail)
-router.get('/addProduct',mainController.addProduct)
-router.get('/:id/edit',mainController.editProduct)
-router.put('/:id/edit',upload.single("newProductImage"),mainControler.update); 
 
+router.get('/',productController.listProduct)
+router.get('/create',productController.addProduct);
+router.get('/productCart',productController.productCart)
+router.get('/:id',productController.productDetail)
+router.post('/',upload.single("productImage"),productController.store);
+router.get('/:id/edit',productController.editProduct)
+router.put('/:id/edit',upload.single("productImage"),productController.update); 
+router.delete('/:id',productController.destroy); 
 
 
 module.exports=router

@@ -11,6 +11,9 @@
                     </h1>
                 </div>
                 <div class="order-header-product-list">
+                    <a href="/products/create">Agregar</a>
+                </div>
+                <div class="order-header-product-list">
                     <select name="category" id="category" class="form-input">
                         <option value="">Ordenar por</option>
                         <option value="in-sale">En oferta</option>
@@ -23,7 +26,7 @@
                     <% productsSent.forEach(producto => { %> 
                     <article class="article-products">
                         <a style="text-decoration: none;color: #000000;" href="/products/<%= producto.id %>">
-                            <img src="<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
+                            <img src="/img/products/<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
                             <div class="main-article">
                                 <% if (producto.productDiscount == 0 ){ %>
                                 <p class="price"><%= producto.productPrice %></p>
