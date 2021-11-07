@@ -84,6 +84,15 @@
     color: #D0A5C0;
 }
 
+.a-nav-item{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.a-nav-item:hover{
+    color: #D0A5C0;
+}
+
 @media (min-width:320px){
     .img-logo{
         width: 77px;
