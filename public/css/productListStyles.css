@@ -11,7 +11,13 @@ img{
     width:100%;
 }
 
-
+.add-header-product-list{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #d0a5c0;
+    padding: 4px;
+    text-decoration: none;
+}
 
 @media (min-width:320px){
     .products{
@@ -20,7 +26,6 @@ img{
         margin-top: 40px;
         display: flex;
         padding: 15px 20px 0px;
-        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
 
@@ -39,7 +44,6 @@ img{
         margin-top: 40px;
         display: flex;
         padding: 15px 20px 0px;
-        justify-content: space-between;
     }
 
     .order-header-product-list{

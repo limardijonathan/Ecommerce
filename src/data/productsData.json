@@ -136,13 +136,5 @@
   "productCategory": "Tintos",
   "productOffer": true,
   "productDiscount": 15
- },
- {
-  "id": "16",
-  "productName": "test",
-  "productDescription": "probando",
-  "productImage": "1636322682159logo2.png",
-  "productPrice": "1551",
-  "productDiscount": "15"
  }
 ]
