@@ -37,7 +37,7 @@
                         <br>
                         
                     </div>
-                    <a href="/products/<%= productSent.id %>/edit">EDITAR PRODUCTO</a>
+                    <a href="/products/<%= productSent.id %>/edit" class="edit-redirect"  >EDITAR PRODUCTO</a>
                     <form action="/products/<%= productSent.id %>?_method=DELETE" method="POST" style="display: inline-flex">
                         <button type="submit" class="action-button delete">ELIMINAR</button>
                     </form>

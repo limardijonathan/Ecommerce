@@ -43,6 +43,18 @@
 .element.style {
     display: inline-block;
 }
+.action-button,.edit-redirect{
+    border-radius: 7px;
+    background-color: #56638A;
+    padding: 4px;
+    margin: auto;
+    color: black;
+    text-decoration: none;
+    color: white;    
+}
+.action-button{
+    margin-top: 20px;
+}
 
 
 @media (min-width:320px){
@@ -61,6 +73,7 @@
     .img-product{
         width: 250px;
     }
+    
 }
 
 
@@ -88,7 +101,12 @@
     }
     .img-productcontainer img{
         width:65%;
-        text-align: center;}
+        text-align: center;
+    }
+    .action-button,.edit-redirect{
+        margin-left: 0px;
+    }
+
    
 }
 
