@@ -11,7 +11,7 @@
                     </h1>
                 </div>
                 <div class="order-header-product-list">
-                    <a href="/products/create">Agregar</a>
+                    <a class= "add-header-product-list" href="/products/create">Agregar</a>
                 </div>
                 <div class="order-header-product-list">
                     <select name="category" id="category" class="form-input">
@@ -24,7 +24,7 @@
             <div class="section-product">
                 <div class="products">
                     <% productsSent.forEach(producto => { %> 
-                    <article class="article-products">
+                    <div class="article-products">
                         <a style="text-decoration: none;color: #000000;" href="/products/<%= producto.id %>">
                             <img src="/img/products/<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
                             <div class="main-article">
@@ -37,7 +37,7 @@
                                 <h4 class="description"><%= producto.productName %></h4>
                             </div>
                         </a>
-                    </article>
+                    </div>
                     <% }) %>                     
                 </div>                
             </div>

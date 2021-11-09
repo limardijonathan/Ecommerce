@@ -126,6 +126,16 @@
   "productCategory": "Tintos",
   "productOffer": true,
   "productDiscount": 15
+ },
+ {
+  "id": 15,
+  "productName": "Alma gemela",
+  "productDescription": "Intenso color rubí con tonos violetas. Aromas especiados nos recuerdan a aromas primarios como frutas rojas, mora y casis con un final largo. Un vino de gran balance en boca con una atractiva frescura, cuerpo medio y taninos suaves.",
+  "productImage": "alma-gemela-bonarda1.jpg",
+  "productPrice": "$1.190,83",
+  "productCategory": "Tintos",
+  "productOffer": true,
+  "productDiscount": 15
  }
  
   
