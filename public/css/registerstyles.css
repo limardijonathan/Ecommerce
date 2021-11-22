@@ -59,7 +59,7 @@ button{
 
 main{
     position: relative;
-    height: 720px;
+    height: 920px;
     /* background-image:  url("https://static.vecteezy.com/system/resources/previews/001/905/119/non_2x/background-of-cups-wine-icons-free-vector.jpg"); */
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4LjVtnQxr_qYkzReTF0nqqTNQuVOArAbwKg&usqp=CAU);
     background-repeat: repeat;
@@ -94,7 +94,7 @@ main{
     }
    
     main{
-        height: 650px;
+        height: 750px;
     }
     input{
         width: 80%;
