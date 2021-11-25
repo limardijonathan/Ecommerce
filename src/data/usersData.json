@@ -22,7 +22,7 @@
   "userName": "Malissia",
   "email": "mmcateer2@google.co.uk",
   "password": "yOngIvwWAQ6",
-  "image":"default.png",
+  "image": "default.png",
   "birth-date": "14/11/1953",
   "category": "cliente"
  },
@@ -40,7 +40,7 @@
   "userName": "Odey",
   "email": "omaxwell4@behance.net",
   "password": "9weQVtgax",
-  "image":"default.png",
+  "image": "default.png",
   "birth-date": "10/11/1900",
   "category": "administrador"
  },
@@ -67,7 +67,7 @@
   "userName": "Krystle",
   "email": "kstanbridge7@hud.gov",
   "password": "eROGFJNk",
-  "image":"default.png",
+  "image": "default.png",
   "birth-date": "05/06/1941",
   "category": "administrador"
  },
@@ -178,5 +178,13 @@
   "image": "default.png",
   "birth-date": "01/08/1985",
   "category": "cliente"
+ },
+ {
+  "id": 21,
+  "userName": "Federico",
+  "email": "fa141359@gmail.com",
+  "password": "$2a$10$AyGkZP1BfyIL1giVK6ImtOhwJJsPTEEj7ZyC9gzbklSgcAC6pPVmK",
+  "birth-date": "2003-02-03",
+  "image": "1637619825778homeimg5.jpg"
  }
 ]
