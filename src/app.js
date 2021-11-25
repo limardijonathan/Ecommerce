@@ -1,4 +1,5 @@
 const express= require("express")
+const session= require("express-session")
 
 const app =express()
 
@@ -9,7 +10,11 @@ app.set("views", path.join(__dirname, "./views"))
 
 const publicPath = path.join(__dirname,'../public')
 app.use(express.static(publicPath))
-
+app.use(session({
+    secret: "Shh, it's a secret",
+    resave: false,
+    saveUninitialized: false,
+}))
 const mainRouter =require("./routers/main")
 const UserRouter = require("./routers/users")
 const ProductsRouter =require("./routers/products")
