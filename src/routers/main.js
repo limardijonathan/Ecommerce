@@ -1,12 +1,9 @@
-const express=require("express")
-
-
+const express=require("express");
 const router= express.Router();
+const mainControler = require("../controllers/mainController");
 
-const mainController = require("../controllers/mainController");
 
-
-router.get('/',mainController.home)
+router.get('/',mainControler.home)
 
 
 

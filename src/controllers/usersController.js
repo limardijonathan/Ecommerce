@@ -44,9 +44,10 @@ const usersControler={
 
 		return res.render('index/home.ejs')
 
-        }
-         
-        
+        },
+		profile:(req,res)=>{
+			res.render('users/profile.ejs')
+		}
     
 }
 module.exports= usersControler

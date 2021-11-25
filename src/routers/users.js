@@ -39,4 +39,7 @@ router.get('/login', UsersControler.login)
 
 router.post('/login', UsersControler.redirect)
 
+router.get('/profile', UsersControler.profile)
+
+
 module.exports=router
