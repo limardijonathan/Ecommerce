@@ -181,50 +181,10 @@
  },
  {
   "id": 21,
-  "userName": "jonathan",
-  "email": "jlimardi@a.com",
-  "password": "$2a$10$gBBBD/SD7hriGaClw.RlB.e.r8k/mEAvZHz1CfgJu9wWGkhA1endy",
-  "birth-date": "2000-05-02",
-  "image": "1637708469802logo4.png"
- },
- {
-  "id": 22,
-  "userName": "jdasasj",
-  "email": "a@a.com",
-  "password": "$2a$10$1QLgqxUpQ5DtDyhxAvw/GOb0qPIxTj3M23R5knKnisEA6lSbkp832",
-  "birth-date": "2002-07-30",
-  "image": "1637710786037logo4.png"
- },
- {
-  "id": 23,
-  "userName": "jdasasj",
-  "email": "ads@gmail.com",
-  "password": "$2a$10$1pVza.3W9UAfBVSW.y5jPOySPRPUHBbk9GnMqW7.Xx.2byqaOeCnq",
-  "birth-date": "2003-09-03",
-  "image": "1637711209035logo2.png"
- },
- {
-  "id": 24,
-  "userName": "Persona",
-  "email": "p@a.com",
-  "password": "$2a$10$vHy02IEs9HPVGLlZFMa1XeGKUohOvocX4kXkNiQiC3UpNO0k7c93O",
-  "birth-date": "2003-09-25",
-  "image": "1637780158586pipi.png"
- },
- {
-  "id": 25,
-  "userName": "Jonathan",
-  "email": "jlimardi@gmail.com",
-  "password": "$2a$10$3ODDFtqHcolrkygtX775GuywdDyfmkPx0eEyX.CvefcvbXHhQYeCa",
-  "birth-date": "2003-09-24",
-  "image": "1637780715670logo3.png"
- },
- {
-  "id": 26,
-  "userName": "Probando user",
-  "email": "j@j.com",
-  "password": "$2a$10$TClw65tQXameccwstEeJjeoPCzW16eGurEZUuNRFZF8g6h1aiA2wW",
-  "birth-date": "2003-09-24",
-  "image": "1637781688229logo4.png"
+  "userName": "Federico",
+  "email": "fa141359@gmail.com",
+  "password": "$2a$10$AyGkZP1BfyIL1giVK6ImtOhwJJsPTEEj7ZyC9gzbklSgcAC6pPVmK",
+  "birth-date": "2003-02-03",
+  "image": "1637619825778homeimg5.jpg"
  }
 ]
