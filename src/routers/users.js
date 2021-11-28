@@ -17,6 +17,8 @@ const storage = multer.diskStorage({
 const uploadfile = multer({storage})
 
 router.get('/register', UsersControler.register)
+router.get('/profile', UsersControler.profile)
+
 // proceso del registro
 const validations = [
     body('userName').notEmpty().withMessage('Debes escribir un nombre de usuario'),
@@ -32,11 +34,9 @@ const validations = [
     })
 ] 
 
-
 router.post('/register', uploadfile.single('image'),validations,UsersControler.processRegister)
 
 router.get('/login', UsersControler.login)
-
-router.post('/login', UsersControler.redirect)
+router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
 
 module.exports=router

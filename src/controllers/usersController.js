@@ -12,9 +12,25 @@ const usersControler={
         res.render("users/login.ejs")
     },redirect: (req,res)=>{
         res.render('/')
-    },
-    processRegister:(req,res)=>{
-       
+    },loginProcess:(req,res)=>{
+		let userToLogin = User.findByField('email', req.body.email)
+		if (userToLogin){
+			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+			if (isOkThePassword){
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin
+				return res.render('users/profile.ejs')
+			}
+		}
+			return res.render('users/login.ejs',{
+				errors: {
+					email:{
+						msg:'Las credenciales son invalidas'
+					}
+				}				
+			})
+	},processRegister:(req,res)=>{
+		console.log(req.body)
         const resultValidation =validationResult(req)
 		if(resultValidation.errors.length >0 ){
 			return res.render('users/register',{
@@ -44,9 +60,9 @@ const usersControler={
 
 		return res.render('index/home.ejs')
 
-        }
-         
-        
-    
+        },
+		profile:(req,res)=>{
+			res.render('users/profile.ejs')
+		},
 }
 module.exports= usersControler
