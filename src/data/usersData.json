@@ -186,5 +186,13 @@
   "password": "$2a$10$AyGkZP1BfyIL1giVK6ImtOhwJJsPTEEj7ZyC9gzbklSgcAC6pPVmK",
   "birth-date": "2003-02-03",
   "image": "1637619825778homeimg5.jpg"
+ },
+ {
+  "id": 22,
+  "userName": "Jonathan",
+  "email": "jlimardi@gmail.com",
+  "password": "$2a$10$EEzbwYtatTJCSVWCcJJ0JuB4Wn3tgt0EHxopAMqD4R/fTJzP4XZX2",
+  "birth-date": "2003-09-10",
+  "image": "1638077387486logo4.png"
  }
 ]

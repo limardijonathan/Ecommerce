@@ -19,7 +19,7 @@ const usersControler={
 			if (isOkThePassword){
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin
-				return res.render('users/profile.ejs')
+				return res.redirect('/profile')
 			}
 		}
 			return res.render('users/login.ejs',{
@@ -60,9 +60,10 @@ const usersControler={
 
 		return res.render('index/home.ejs')
 
-        },
-		profile:(req,res)=>{
-			res.render('users/profile.ejs')
+        },profile:(req,res)=>{
+			return res.render('users/profile.ejs',{
+				user: req.session.userLogged	
+			})
 		},
 }
 module.exports= usersControler
