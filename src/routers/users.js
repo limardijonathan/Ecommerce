@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 const uploadfile = multer({storage})
 
 router.get('/register', UsersControler.register)
-router.get('/profile', UsersControler.profile)
+router.get('/profile/', UsersControler.profile)
 
 // proceso del registro
 const validations = [
