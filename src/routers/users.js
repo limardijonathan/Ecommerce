@@ -3,7 +3,8 @@ const express = require('express');
 const router= express.Router();
 const multer = require("multer")
 const {body} = require('express-validator')
-
+const guestmiddleware = require('../middlewares/guestmiddleware')
+const authMiddleware = require('../middlewares/authmiddleware')
 
 const storage = multer.diskStorage({
     destination: function(req, file,cb ){
@@ -16,8 +17,8 @@ const storage = multer.diskStorage({
 
 const uploadfile = multer({storage})
 
-router.get('/register', UsersControler.register)
-router.get('/profile/', UsersControler.profile)
+router.get('/register',guestmiddleware, UsersControler.register)
+router.get('/profile/', authMiddleware,UsersControler.profile)
 
 // proceso del registro
 const validations = [
@@ -36,7 +37,7 @@ const validations = [
 
 router.post('/register', uploadfile.single('image'),validations,UsersControler.processRegister)
 
-router.get('/login', UsersControler.login)
+router.get('/login', guestmiddleware,UsersControler.login)
 router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
 
 module.exports=router

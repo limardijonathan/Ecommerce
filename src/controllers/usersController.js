@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs')
 
 const usersControler={
     register:(req,res)=>{
+		res.cookie('testing', 'hola mundo' ,)
         res.render("users/register.ejs")
     },
     login:(req,res)=>{
@@ -30,7 +31,6 @@ const usersControler={
 				}				
 			})
 	},processRegister:(req,res)=>{
-		console.log(req.body)
         const resultValidation =validationResult(req)
 		if(resultValidation.errors.length >0 ){
 			return res.render('users/register',{
@@ -58,7 +58,7 @@ const usersControler={
 		}
 		User.create(userToCreate)
 
-		return res.render('index/home.ejs')
+		return res.render('users/login.ejs')
 
         },profile:(req,res)=>{
 			return res.render('users/profile.ejs',{

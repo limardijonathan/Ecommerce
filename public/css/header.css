@@ -5,6 +5,8 @@
     font-family: "Montserrat" , sans-serif;
 }
 /* estilos del header */
+
+
 .section-advertising{
     background-color: #272727;
     color: #FFFFFF;
@@ -38,6 +40,7 @@
 .form-search{
     display: inline-block;
     width: 100%;
+    margin: auto;
  }
 
  .search-input{
@@ -63,7 +66,7 @@
 }
 
 .svg{
-    height: 40px;
+    height: 30px;
     width:30px;
 }
 
@@ -91,6 +94,15 @@
 
 .a-nav-item:hover{
     color: #D0A5C0;
+}
+
+.user{
+    font-size: 10px;
+}
+.user-img{
+    width:30px;
+    height: 30px;
+    border-radius: 100%;
 }
 
 @media (min-width:320px){

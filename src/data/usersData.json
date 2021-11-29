@@ -194,5 +194,37 @@
   "password": "$2a$10$EEzbwYtatTJCSVWCcJJ0JuB4Wn3tgt0EHxopAMqD4R/fTJzP4XZX2",
   "birth-date": "2003-09-10",
   "image": "1638077387486logo4.png"
+ },
+ {
+  "id": 23,
+  "userName": "sol",
+  "email": "solmalnis@gmail.com",
+  "password": "$2a$10$HfXLxi9ODq3rek/dgpG62eRJWxrT1kRi8mU9KNPe98VcOKQy9gO2y",
+  "birth-date": "2000-11-02",
+  "image": "1638134984446Naranja Verde y Negro Formas Geométricas Anuncio Minimalista Tu Historia.png"
+ },
+ {
+  "id": 24,
+  "userName": "juan",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$zvtHYozbALf9vSrOz2EWH.2u6iFTTYxto.8hoPH9FyZktfRZrvudi",
+  "birth-date": "2003-09-18",
+  "image": "1638137980023myAvatar.png"
+ },
+ {
+  "id": 25,
+  "userName": "amanda",
+  "email": "amanda@gmail.com",
+  "password": "$2a$10$IA0qNILep7D4Ccrl0S/u5.YXltho88e4DoSk5/VcB6c5uv8zM0owy",
+  "birth-date": "2003-09-02",
+  "image": "1638208675106Paleta2.png"
+ },
+ {
+  "id": 26,
+  "userName": "agus",
+  "email": "agus@gmail.com",
+  "password": "$2a$10$AeJ.8Xx6OvgEdfembcjfq.6vFOJGTwfDohsbIUNLvn9xxa/SRESPW",
+  "birth-date": "2003-09-10",
+  "image": "1638226332324Paleta2.png"
  }
 ]

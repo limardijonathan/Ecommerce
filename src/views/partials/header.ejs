@@ -17,18 +17,27 @@
             </form>
             </div>
             <div id="login-registro">
+                <div class='user'>
+                    <% if (locals.isLoged){ %>
+                        <h1><%=locals.userLoged.userName%></h1>
+                    <%}%>
+                </div>
                 <a href="/login">
-                <svg class="svg">
+                    <% if (locals.isLoged){ %>
+                        <img class= 'user-img' src='/img/avatars/<%=locals.userLoged.image%>'>
+                    <%} else{%>
+                    <svg class="svg">
                     <path class="path" d="M12,12A5,5,0,1,0,7,7,5,5,0,0,0,12,12Zm0-8A3,3,0,1,1,9,7,3,3,0,0,1,12,4Zm4,10H8a5,5,0,0,0-5,5v2a1,1,0,0,0,2,0V19a3,3,0,0,1,3-3h8a3,3,0,0,1,3,3v2a1,1,0,0,0,2,0V19A5,5,0,0,0,16,14Z">
-                    </path>
-                </svg>
-            </a>
-            <a href="/productCart">
-                <svg class="svg">
-                    <path class="path" d="M21.79,5.39l-3-4A1,1,0,0,0,18,1H6a1,1,0,0,0-.8.4l-3,4A1,1,0,0,0,2,6H2V20a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V6h0A1,1,0,0,0,21.79,5.39ZM6.5,3h11L19,5H5ZM7,10a1,1,0,0,1,2,0,3,3,0,0,0,6,0,1,1,0,0,1,2,0A5,5,0,0,1,7,10ZM20,20a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7H20Z">
-                    </path>
-                </svg>
-            </a>
+                    </path></svg>
+                    <%}%>
+                </a>
+              
+                
+                <a href="/productCart">
+                    <svg class="svg">
+                        <path class="path" d="M21.79,5.39l-3-4A1,1,0,0,0,18,1H6a1,1,0,0,0-.8.4l-3,4A1,1,0,0,0,2,6H2V20a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V6h0A1,1,0,0,0,21.79,5.39ZM6.5,3h11L19,5H5ZM7,10a1,1,0,0,1,2,0,3,3,0,0,0,6,0,1,1,0,0,1,2,0A5,5,0,0,1,7,10ZM20,20a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V7H20Z">
+                    </path></svg>
+                </a>
             </div>
         </div>
         <div>
@@ -49,6 +58,7 @@
             <div class="burger-menu">
                 <i class="fa fa-bars burger"></i>
             </div>
-        </div>            
+        </div>
+        
     </div>
 </header>
