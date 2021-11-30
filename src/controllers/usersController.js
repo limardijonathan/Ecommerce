@@ -9,17 +9,25 @@ const usersControler={
 		res.cookie('testing', 'hola mundo' ,)
         res.render("users/register.ejs")
     },
+
     login:(req,res)=>{
         res.render("users/login.ejs")
-    },redirect: (req,res)=>{
+    },
+	
+	redirect: (req,res)=>{
         res.render('/')
-    },loginProcess:(req,res)=>{
+    },
+	
+	loginProcess:(req,res)=>{
 		let userToLogin = User.findByField('email', req.body.email)
 		if (userToLogin){
 			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
 			if (isOkThePassword){
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin
+				if(req.body.checkBox){
+					res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
+				}
 				return res.redirect('/profile')
 			}
 		}
@@ -30,7 +38,10 @@ const usersControler={
 					}
 				}				
 			})
-	},processRegister:(req,res)=>{
+	},
+	
+	
+	processRegister:(req,res)=>{
         const resultValidation =validationResult(req)
 		if(resultValidation.errors.length >0 ){
 			return res.render('users/register',{
@@ -60,10 +71,12 @@ const usersControler={
 
 		return res.render('users/login.ejs')
 
-        },profile:(req,res)=>{
-			return res.render('users/profile.ejs',{
-				user: req.session.userLogged	
+    },
+	
+	profile:(req,res)=>{
+		return res.render('users/profile.ejs',{
+			user: req.session.userLogged	
 			})
-		},
+		}
 }
 module.exports= usersControler
