@@ -226,5 +226,21 @@
   "password": "$2a$10$AeJ.8Xx6OvgEdfembcjfq.6vFOJGTwfDohsbIUNLvn9xxa/SRESPW",
   "birth-date": "2003-09-10",
   "image": "1638226332324Paleta2.png"
+ },
+ {
+  "id": 27,
+  "userName": "Martin",
+  "email": "martin@gmail.com",
+  "password": "$2a$10$B15zTfLIY4Z8VRhKe/iiq.YVzEhQmYiQcns2gMSKaPu6fY.OcT67O",
+  "birth-date": "2003-06-10",
+  "image": "1638227169633homeimg4.jpg"
+ },
+ {
+  "id": 28,
+  "userName": "german",
+  "email": "german@gmail.com",
+  "password": "$2a$10$23hI579g2B6AhtlyX/mYdOEQaWoGRxrFtd16wsG6IpSZH1W.bWTpS",
+  "birth-date": "2003-09-02",
+  "image": "1638227418034homeimg4.jpg"
  }
 ]
