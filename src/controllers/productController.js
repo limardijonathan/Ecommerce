@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../database/models')
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -52,8 +52,13 @@ const ProductsController={
         fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
 		res.redirect("/products")},
     listProduct:(req,res) =>{
+        db.Product.findAll()
+        .then(function(productos){
+           console.log(productos)
+        })
+
         res.render("products/productList.ejs",
-        {productsSent: products})
+        {productsSent: products}) 
     },
     redirect: (req,res)=>{
         res.redirect("/")
