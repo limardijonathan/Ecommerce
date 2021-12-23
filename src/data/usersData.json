@@ -242,5 +242,21 @@
   "password": "$2a$10$23hI579g2B6AhtlyX/mYdOEQaWoGRxrFtd16wsG6IpSZH1W.bWTpS",
   "birth-date": "2003-09-02",
   "image": "1638227418034homeimg4.jpg"
+ },
+ {
+  "id": 29,
+  "userName": "sol",
+  "email": "dhardbattle3@icq.com",
+  "password": "$2a$10$sDe1dYsE3KWpICqHr/oGve3Fg09yS851J3UbXnh1TRtSyWmsWhN.G",
+  "birth-date": "2003-09-24",
+  "image": "1640185527333opcion Paleta.png"
+ },
+ {
+  "id": 30,
+  "userName": "sol",
+  "email": "dhardbattle3@icq.com",
+  "password": "$2a$10$yhLxAMjnnBZiFFlaxfBthe..ZTHMiIQDCtvJelJNYztpFt3Y.tUjS",
+  "birth-date": "2003-09-24",
+  "image": "1640185607573opcion Paleta.png"
  }
 ]

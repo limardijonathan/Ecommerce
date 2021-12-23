@@ -25,7 +25,7 @@ const validations = [
     body('userName').notEmpty().withMessage('Debes escribir un nombre de usuario'),
     body('email').notEmpty().withMessage('Debes escribir un email').bail().isEmail().withMessage('el correo electronico debe ser valido'),
     body('password').notEmpty().withMessage('Debes escibir una constraseña').bail().isLength({min:5, max:15}).withMessage('debe contener entre 5 y 15 caracteres'),
-    body('birth-date').notEmpty().withMessage('Debes ingresar tu edad'),
+    body('birthDate').notEmpty().withMessage('Debes ingresar tu edad'),
     body ('image').custom((value, {req})=>{
         let file = req.file
         if (!file){

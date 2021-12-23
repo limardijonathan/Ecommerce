@@ -2,6 +2,7 @@
 const {validationResult} = require('express-validator')
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
+const db = require('../database/models')
 
 
 const usersControler={
@@ -12,6 +13,9 @@ const usersControler={
 
     login:(req,res)=>{
         res.render("users/login.ejs")
+		
+		
+
     },
 	
 	redirect: (req,res)=>{
@@ -19,57 +23,80 @@ const usersControler={
     },
 	
 	loginProcess:(req,res)=>{
-		let userToLogin = User.findByField('email', req.body.email)
-		if (userToLogin){
-			let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
-			if (isOkThePassword){
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin
-				if(req.body.checkBox){
-					res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
-				}
-				return res.redirect('/profile')
+		 db.User.findOne({
+			where:{
+				email : req.body.email
 			}
-		}
-			return res.render('users/login.ejs',{
-				errors: {
-					email:{
-						msg:'Las credenciales son invalidas'
+		}).then((userToLogin)=>{
+			if (userToLogin){
+				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
+				if (isOkThePassword){
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin
+					//console.log(userToLogin)
+					if(req.body.checkBox){
+						res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
 					}
-				}				
-			})
+					return res.redirect('/profile')
+				} 
+			}
+				 return res.render('users/login.ejs',{
+					errors: {
+						email:{
+							msg:'Las credenciales son invalidas'
+						}
+					}				
+				})
+			
+		})
+		
+		
 	},
 	
 	
 	processRegister:(req,res)=>{
         const resultValidation =validationResult(req)
 		if(resultValidation.errors.length >0 ){
+			console.log(resultValidation.errors)
 			return res.render('users/register',{
 				errors: resultValidation.mapped(),
 				oldData : req.body
 			})
 		}
-        let UserInDb = User.findByField('email', req.body.email)
-        if(UserInDb){
-            return res.render('users/register',{
-				errors: {
-					email:{
-						msg:'Este email ya esta registrado'
-					}
-					
-				},
-				oldData :req.body
-			})
-		}
+        db.User.findOne({
+			where:{
+				email : req.body.email
+			}
+		}).then((UserInDb)=>{
+			if(UserInDb){
+				return res.render('users/register',{
+					errors: {
+						email:{
+							msg:'Este email ya esta registrado'
+						}
+						
+					},
+					oldData :req.body
+				})
+			}
+	
 
-		let userToCreate={
-			...req.body,
+		})
+       
+	
+		db.User.create({
+			userName:req.body.userName,
+			email:req.body.email,
 			password: bcrypt.hashSync( req.body.password ,10),
-			image: req.file.filename
-		}
-		User.create(userToCreate)
+			image: req.file.filename,
+			birthDate: req.body.birthDate
 
-		return res.render('users/login.ejs')
+		}).then((user)=>{
+			return res.render('users/login.ejs')
+			
+		})
+
+		 
 
     },
 	
