@@ -10,83 +10,79 @@ const ProductsController={
     productCart:(req,res)=>{
         res.render("products/productCart.ejs")
     },productDetail:(req,res)=>{
-        const id = req.params.id;    
-        const product = products.find(product =>{
-			return product.id == id
-		})
+        db.Product.findOne({
+			where:{
+				id : req.params.id
+			}
+		}).then(function(product){
+            res.render("products/productDetail.ejs",
+            {productSent: product})
+        }) 
 
-        res.render("products/productDetail.ejs",{
-            productSent: product
-        })
     },addProduct:(req,res) =>{
         res.render("products/addProduct.ejs")
     },editProduct:(req,res) =>{
-        const id = req.params.id;    
-        const product = products.find(product =>{
-			return product.id == id
-		})
-        res.render("products/editProduct",{
-            productSent: product
+        db.Product.findOne({
+			where:{
+				id : req.params.id
+			}
+		}).then(function(product){
+            res.render("products/editProduct",
+            {productSent: product})
         })
     },
-    update:(req,res)=>{let id =req.params.id;
-		let productToEdit = products.find(product =>{
-			return product.id == id
-		})
-		let editedProduct={
-            id: id, 
+    update:(req,res)=>{
+        db.Product.update({
 			productName:req.body.productName,
 			productDescription:req.body.productDescription,
-            productImage: req.file ? req.file.filename : productToEdit.productImage,
+            productImage: req.file.filename,
 			productPrice:req.body.productPrice,
-			productCategory:req.body.productCategory,
+			idCategory:req.body.productCategory,
 			productOffer:req.body.productOffer,
             productDiscount: req.body.productDiscount
-		}
-		products.forEach((producto,index) => {
-			if (producto.id == id){
-				products[index] =editedProduct
-			}
-			
-		})
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
-		res.redirect("/products")},
+          }, {
+            where: { id: req.params.id },
+          })
+          .then(function (result) {
+            res.redirect("/products")
+          })
+
+    },
     listProduct:(req,res) =>{
         db.Product.findAll()
-        .then(function(productos){
-           console.log(productos)
+        .then(function(products){
+            res.render("products/productList.ejs",
+            {productsSent: products}) 
         })
 
-        res.render("products/productList.ejs",
-        {productsSent: products}) 
     },
     redirect: (req,res)=>{
         res.redirect("/")
     },
     store: (req,res) =>{
-        let newProduct ={
-            id: products[products.length - 1].id + 1, 
-			productName:req.body.productName,
-			productDescription:req.body.productDescription,
-            productImage: req.file.filename,
-			productPrice:req.body.productPrice,
-			productCategory:req.body.productCategory,
-			productOffer:req.body.productOffer,
-            productDiscount: req.body.productDiscount     
-        }
+            db.Product.create({
+                productName:req.body.productName,
+                productDescription:req.body.productDescription,
+                productImage: req.file.filename,
+                productPrice:req.body.productPrice,
+                idCategory:req.body.productCategory,
+                productOffer:req.body.productOffer,
+                productDiscount: req.body.productDiscount     
 
-        products.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(products,null, " "))
-		res.redirect("/products")},
-    destroy:(req,res) =>{
-            let id =req.params.id;
-            let finalProducts = products.filter(product =>{
-                return product.id != id
+            }).then((user)=>{
+                res.redirect("/products")			
             })
+		},
+    destroy:(req,res) =>{
+        db.Product.destroy({
+            where: {
+                id : req.params.id
 
-            fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts,null, " "))
-            res.redirect("/products")
-        },
+            },
+          }).then(()=>{
+            res.redirect("/products")			
+        })        
+    },
 }
 
 module.exports= ProductsController

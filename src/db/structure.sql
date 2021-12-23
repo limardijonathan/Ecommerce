@@ -3,11 +3,11 @@ CREATE DATABASE buenosTintosDB
 USE buenosTintosDB
 
 CREATE TABLE `product` (
-   `id` int NOT NULL,
+   `id` int NOT NULL AUTO_INCREMENT,
    `productName` VARCHAR(255) NOT NULL,
    `productDescription` VARCHAR(1024) NOT NULL,
    `productImage` BLOB NOT NULL,
-   `productPrice` DECIMAL NOT NULL,
+   `productPrice` DECIMAL(10,2) NOT NULL,
    `idCategory` INT NOT NULL,
    `productOffer` BINARY NOT NULL,
    `productDiscount` INT NOT NULL,
@@ -25,12 +25,12 @@ CREATE TABLE `user` (
    `userName` VARCHAR(255) NOT NULL,
    `email` VARCHAR(255) NOT NULL,
    `password` VARCHAR(255) NOT NULL,
-   `image` BLOB NOT NULL,
+   `image` VARCHAR(255) NOT NULL,
    `birthDate` DATE NOT NULL,
    `isAdmin` BINARY NOT NULL,
    PRIMARY KEY (`id`)
 );
-
+   
 CREATE TABLE `productCart` (
    `id` INT NOT NULL,
    `idUser` INT NOT NULL,
