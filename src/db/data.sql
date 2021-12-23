@@ -31,4 +31,3 @@ VALUES
 (7, 'antigal uno sauvignon blanc', 'La dulzura y el cuerpo de este vino dan sensación de felicidad', "antigal uno sauvignon blanc.jpg", 1000, 4, true, 10),
 (8, 'Animal Extra Brut', 'Extra brut de caracter fuerte. Beber a 5°c en copa.', "animal-extra-brut1-.jpg", 650, 5, true, 15),
 (9, 'Cruzat - Naranjo', 'Cruzat Naranjo es un espumante de uvas blancas con alma de tinto; es un vino espumoso obtenido a través de la maceración de uva Chardonnay -provenientes de Luján de Cuyo- fermentado con levaduras indígenas y con sus pieles, tal como se elaboran los vinos tintos. Es el primer y único vino espumoso naranjo del mercado argentino elaborado bajo método tradicional. Su elaboración está inspirada en técnicas ancestrales para alcanzar una extraordinaria concentración de color, aromas y sabores.', "cruzat-naranjo1-.png", 1250, 5, true, 15);
-

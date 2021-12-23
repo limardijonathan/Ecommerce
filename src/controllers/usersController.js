@@ -104,6 +104,9 @@ const usersControler={
 		return res.render('users/profile.ejs',{
 			user: req.session.userLogged	
 			})
-		}
+		},
+	edituser:(req,res)=>{
+		return res.render('users/edituser.ejs')
+		},		
 }
 module.exports= usersControler

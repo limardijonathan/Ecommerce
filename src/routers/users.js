@@ -36,8 +36,11 @@ const validations = [
 ] 
 
 router.post('/register', uploadfile.single('image'),validations,UsersControler.processRegister)
+router.get('/edituser', UsersControler.edituser)
+router.post('/edituser', uploadfile.single('image'),validations,UsersControler.edituser)
 
 router.get('/login', guestmiddleware,UsersControler.login)
 router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
+
 
 module.exports=router
