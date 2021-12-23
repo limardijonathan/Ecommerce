@@ -1,5 +1,8 @@
-CREATE DATABASE IF NOT EXISTS 'buenosTintosDB';
-USE 'buenosTintosDB';
+DROP DATABASE IF EXISTS buenosTintosDB;
+CREATE DATABASE buenosTintosDB;
+USE buenosTintosDB;
+
+
 
 CREATE TABLE `product` (
    `id` int NOT NULL,
