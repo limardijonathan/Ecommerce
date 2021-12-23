@@ -17,7 +17,7 @@ module.exports = (sequelize,dataTypes) =>{
             type: dataTypes.BLOB
         },
         productPrice:{
-            type: dataTypes.INTEGER
+            type: dataTypes.DECIMAL(10, 2)
         },
         idCategory:{
            type: dataTypes.BIGINT(10).UNSIGNED

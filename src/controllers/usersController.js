@@ -29,11 +29,11 @@ const usersControler={
 			}
 		}).then((userToLogin)=>{
 			if (userToLogin){
+				console.log(userToLogin)
 				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
 				if (isOkThePassword){
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin
-					//console.log(userToLogin)
 					if(req.body.checkBox){
 						res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
 					}

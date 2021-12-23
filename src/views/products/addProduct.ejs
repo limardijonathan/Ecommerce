@@ -27,27 +27,26 @@
                 <div class="info" >
                     <label>Categoria del producto:</label><br>
                     <div id="information">
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="set-de-vinos"class="option">set de vinos</label><br>
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="tintos" class="option">Tintos</label><br>
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="blancos" class="option">Blancos</label><br>
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="rosados" class="option">Rosados</label><br>
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="dulces" class="option">Dulces</label><br>
-                  <label class="label-info"><input type="checkbox" name="productCategory" value="espumantes" class="option">Espumantes</label><br>
+                  <label class="label-info"><input type="checkbox" name="productCategory" value=1 class="option">Tintos</label><br>
+                  <label class="label-info"><input type="checkbox" name="productCategory" value=2 class="option">Blancos</label><br>
+                  <label class="label-info"><input type="checkbox" name="productCategory" value=3 class="option">Rosados</label><br>
+                  <label class="label-info"><input type="checkbox" name="productCategory" value=4 class="option">Dulces</label><br>
+                  <label class="label-info"><input type="checkbox" name="productCategory" value=5 class="option">Espumantes</label><br>
                 </div>
                 </div>
                 <div class="info">
                     <label for="price">Precio:</label><br/>
-                    <input name="productPrice" type="number" id="price" placeholder= "ingresar el precio" required >
+                    <input name="productPrice" type="number" step="0.01" id="price" placeholder= "ingresar el precio" required >
                 </div>
                 <div class="info">
                     <label>¿esta de oferta?</label><br>
                     <div id="information">
                         <label class="label-info"><input type="checkbox" name="productOffer" value=true class="option">si contiene oferta</label><br>
-                        <label class="label-info"><input type="checkbox" name="productOffer" value=false class="option">no contine oferta</label><br>
+                        <label class="label-info"><input type="checkbox" name="productOffer" value=false class="option">no contiene oferta</label><br>
                     </div>
                     <br>
                     <label for="off">procentaje de oferta en caso de tenerlo</label><br/>
-                    <input name="productDiscount" type="number" id="off" placeholder= "ingresar el procentaje de oferta" required >
+                    <input name="productDiscount" type="number"  id="off" placeholder= "ingresar el procentaje de oferta" required >
                 </div>
                 <div id="button">
                     <button type="submit">Agregar Producto</button>
