@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head', {title:"Registro de usuarios", css:"registerstyles"}) %>   
+<body>
+    <%- include ('../partials/header') %> 
+    <main>
+        <div id="main-box" >    
+            <form action="/edit?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                <div>
+                    <h2>
+                        ¡Edita tu cuenta!
+                    </h2>
+                </div>
+                <div class="info">
+                    <label for="user-name">Nombre de usuari@:</label><br/>
+                    <input type="text" name="userName"  id="name" value="<%=user.userName%>">
+                    
+                </div>
+                <div class="info">
+                    <label for="e-mail">Email:</label><br/>
+                    <input type="email" name="email"  id="e-mail" value="<%=user.email%>">
+                   
+                </div>
+               
+                <div class="info">
+                    <label for="img">Imagen de perfil:</label><br/>
+                    <input name="image" type="file" id="img" accept=".jpg,.png" > 
+                    <% if (locals.errors  && errors.image){ %>
+                        <div class= text-danger >
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %> 
+                </div>
+                
+                <div id="button">
+                    <button type="submit">Editar Cuenta</button>
+                </div>
+            </form>
+
+
+        </div>
+    </main>
+    <%- include ('../partials/footer') %>
+</body>
+</html>

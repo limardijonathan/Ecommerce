@@ -104,6 +104,20 @@ const usersControler={
 		return res.render('users/profile.ejs',{
 			user: req.session.userLogged	
 			})
-		}
+		},
+	edit:(req,res)=>{
+		return res.render('users/editUser.ejs',{
+			user: req.session.userLogged	
+			})
+	},
+	update:(req,res)=>{
+		db.User.findOne({
+			where:{
+				email: req.session.userLogged.email
+			}.then((usuario)=>{
+				console.log(usuario)
+			})
+		})
+	}
 }
 module.exports= usersControler
