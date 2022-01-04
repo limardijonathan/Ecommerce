@@ -106,7 +106,9 @@ const usersControler={
 			})
 		},
 	edituser:(req,res)=>{
-		return res.render('users/edituser.ejs')
-		},		
+		return res.render('users/edituser.ejs',{
+			user: req.session.userLogged	
+			})
+	},
 }
 module.exports= usersControler
