@@ -29,7 +29,6 @@ const usersControler={
 			}
 		}).then((userToLogin)=>{
 			if (userToLogin){
-				console.log(userToLogin)
 				let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password)
 				if (isOkThePassword){
 					delete userToLogin.password;
@@ -57,7 +56,6 @@ const usersControler={
 	processRegister:(req,res)=>{
         const resultValidation =validationResult(req)
 		if(resultValidation.errors.length >0 ){
-			console.log(resultValidation.errors)
 			return res.render('users/register',{
 				errors: resultValidation.mapped(),
 				oldData : req.body
@@ -109,6 +107,25 @@ const usersControler={
 		return res.render('users/edituser.ejs',{
 			user: req.session.userLogged	
 			})
+	},
+	update:(req,res)=>{
+        db.User.update({
+			userName:req.body.userName,
+			email:req.body.email,
+			image: req.file.filename,
+          }, {
+            where: { id: req.session.userLogged.id },
+          })
+          .then(function (result) {
+			db.User.findOne({
+				where:{
+					email : req.body.email
+				}
+			}).then((userToLogin)=>{
+				req.session.userLogged = userToLogin
+				res.redirect("/profile")
+			})
+          })
 	},
 }
 module.exports= usersControler

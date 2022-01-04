@@ -4,3 +4,13 @@ text-align: center;
 margin-bottom: 75px;
 
 }
+
+.edit-redirect{
+    border-radius: 7px;
+    background-color: #56638A;
+    padding: 4px;
+    color: black;
+    text-decoration: none;
+    color: white;
+margin-bottom: 50px;
+}

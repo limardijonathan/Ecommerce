@@ -43,7 +43,7 @@ router.post('/edituser', uploadfile.single('image'),validations,UsersControler.e
 router.get('/login', guestmiddleware,UsersControler.login)
 router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
 router.get('/edit', UsersControler.edituser)
-//router.put('/edit',uploadfile.single("image"),UsersControler.update); 
+router.put('/edit',uploadfile.single("image"),UsersControler.update); 
 
 
 module.exports=router
