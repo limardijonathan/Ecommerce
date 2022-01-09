@@ -7,7 +7,6 @@ const db = require('../database/models')
 
 const usersControler={
     register:(req,res)=>{
-		res.cookie('testing', 'hola mundo' ,)
         res.render("users/register.ejs")
     },
 
@@ -16,10 +15,6 @@ const usersControler={
 		
 		
 
-    },
-	
-	redirect: (req,res)=>{
-        res.render('/')
     },
 	
 	loginProcess:(req,res)=>{
@@ -87,7 +82,8 @@ const usersControler={
 			email:req.body.email,
 			password: bcrypt.hashSync( req.body.password ,10),
 			image: req.file.filename,
-			birthDate: req.body.birthDate
+			birthDate: req.body.birthDate,
+			isAdmin: false
 
 		}).then((user)=>{
 			return res.render('users/login.ejs')
