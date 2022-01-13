@@ -17,9 +17,6 @@ window.onload = () => {
             errors.push('La descripción debe tener al menos 20 caracteres');
         };
 
-        if (image.length < 20){
-            errors.push('El nombre debe tener al menos 5 caracteres');
-        };
 
         //Aquí controlo que es lo que debo hacer si hay o no errores en el formulario
 
@@ -32,8 +29,13 @@ window.onload = () => {
             ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
         };
         }else{
-            alert('La validación de los datos fué exitosa')
             form.submit();
         }
+
+
+
+
     });
+
+
 }
