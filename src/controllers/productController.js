@@ -47,23 +47,27 @@ const ProductsController={
                 productSent: product
 
 			})
-		}})
+		}
+        else{
+            db.Product.update({
+                productName:req.body.productName,
+                productDescription:req.body.productDescription,
+                //productImage: req.file.filename,
+                productPrice:req.body.productPrice,
+                idCategory:req.body.productCategory,
+                productOffer:req.body.productOffer,
+                productDiscount: req.body.productDiscount
+              }, {
+                where: { id: req.params.id },
+              })
+              .then(function (result) {
+                res.redirect("/products")
+              })
+    
+        }})
+       
 
-        db.Product.update({
-			productName:req.body.productName,
-			productDescription:req.body.productDescription,
-            //productImage: req.file.filename,
-			productPrice:req.body.productPrice,
-			idCategory:req.body.productCategory,
-			productOffer:req.body.productOffer,
-            productDiscount: req.body.productDiscount
-          }, {
-            where: { id: req.params.id },
-          })
-          .then(function (result) {
-            res.redirect("/products")
-          })
-
+        
     },
     listProduct:(req,res) =>{
         db.Product.findAll()

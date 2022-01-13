@@ -17,7 +17,7 @@ module.exports = (sequelize,dataTypes) =>{
             type: dataTypes.STRING(255)
         },
         image:{
-            type: dataTypes.BLOB
+            type: dataTypes.STRING(255)
         },
         birthDate:{
            type: dataTypes.DATE
