@@ -2,7 +2,14 @@ const UsersControler = require("../controllers/UsersController");
 const express = require('express');
 const router= express.Router();
 const multer = require("multer")
-const {body} = require('express-validator')
+
+// requires de validaciones 
+const registerValidations= require('../middlewares/registerValidations')
+const editUserValidations = require('../middlewares/editUserValidations')
+
+
+
+//requires de otros middlewares
 const guestmiddleware = require('../middlewares/guestmiddleware')
 const authMiddleware = require('../middlewares/authmiddleware');
 const User = require("../models/User");
@@ -31,30 +38,14 @@ const uploadfile = multer({storage})
 router.get('/register',guestmiddleware, UsersControler.register)
 router.get('/profile/', authMiddleware,UsersControler.profile)
 
-// proceso del registro
-const validations = [
-    body('userName').notEmpty().withMessage('Debes escribir un nombre de usuario'),
-    body('email').notEmpty().withMessage('Debes escribir un email').bail().isEmail().withMessage('el correo electronico debe ser valido'),
-    body('password').notEmpty().withMessage('Debes escibir una constraseña').bail().isLength({min:5, max:15}).withMessage('debe contener entre 5 y 15 caracteres'),
-    body('birthDate').notEmpty().withMessage('Debes ingresar tu edad'),
-    body ('image').custom((value, {req})=>{
-        let file = req.file
-        if (!file){
-            throw new Error('Tienes que subir una imagen')
-        }
-        return true;
-    })
-] 
 
-router.post('/register', uploadfile.single('image'),validations,UsersControler.processRegister)
-router.get('/edituser', UsersControler.edituser)
-router.post('/edituser', uploadfile.single('image'),validations,UsersControler.edituser)
+router.post('/register', uploadfile.single('image'),registerValidations,UsersControler.processRegister)
+
 
 router.get('/login', guestmiddleware,UsersControler.login)
 router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
 router.get('/edit', UsersControler.edituser)
-router.put('/edit',uploadfile.single("image"),UsersControler.update); 
-router.post('/logout',UsersControler.logout)
+router.put('/edit',uploadfile.single("image"),editUserValidations,UsersControler.update); 
 
 
 module.exports=router

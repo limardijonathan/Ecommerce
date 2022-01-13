@@ -4,13 +4,6 @@ window.onload = () => {
         let errors = [];
         let name = document.querySelector('#name');
         let description = document.querySelector('#description');
-        let image = document.querySelector('#image');
-        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
-
-        var filePath = image.value;
-        if(!allowedExtensions.exec(filePath)){
-            errors.push('Los formatos validos de imagen son: .jpeg/.jpg/.png/.gif');
-        };
 
         if (name.value == '') {
             errors.push('El nombre no puede ser vacio');

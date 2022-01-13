@@ -13,18 +13,28 @@
                 </div>
                 <div class="info">
                     <label for="user-name">Nombre de usuari@:</label><br/>
-                    <input type="text" name="userName"  id="name" value="<%= user.userName %>">
+                    <input type="text" name="userName"  id="name" value="<%= locals.oldData ? oldData.userName : user.userName %>">
+                    <% if (locals.errors  && errors.userName){ %>
+                        <div class= text-danger >
+                            <%= errors.userName.msg %>
+                        </div>
+                    <% } %> 
                     
                 </div>
                 <div class="info">
                     <label for="e-mail">Email:</label><br/>
-                    <input type="email" name="email"  id="e-mail" value="<%=user.email%>">
+                    <input type="email" name="email"  id="e-mail" value="<%= locals.oldData ? oldData.email : user.email%>">
+                    <% if (locals.errors  && errors.email){ %>
+                        <div class= text-danger >
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %> 
                    
                 </div>
                
                 <div class="info">
                     <label for="img">Imagen de perfil:</label><br/>
-                    <input name="image" type="file" id="img" accept=".jpg,.png" > 
+                    <input name="image" type="file" id="img" accept=".jpg,.png" value= "<%= locals.oldData ? oldData.image : null %>" > 
                     <% if (locals.errors  && errors.image){ %>
                         <div class= text-danger >
                             <%= errors.image.msg %>

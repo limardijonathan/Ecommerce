@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models')
+const {validationResult} = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/productsData.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,15 +28,31 @@ const ProductsController={
 				id : req.params.id
 			}
 		}).then(function(product){
+            
             res.render("products/editProduct",
-            {productSent: product})
+            {productSent: product,})
         })
     },
     update:(req,res)=>{
+        const resultValidation =validationResult(req)
+        db.Product.findOne({
+			where:{
+				id : req.params.id
+			}
+        }).then(function(product){
+		if(resultValidation.errors.length >0 ){
+			return res.render('products/editProduct.ejs',{
+				errors: resultValidation.mapped(),
+				oldData : req.body,
+                productSent: product
+
+			})
+		}})
+
         db.Product.update({
 			productName:req.body.productName,
 			productDescription:req.body.productDescription,
-            productImage: req.file.filename,
+            //productImage: req.file.filename,
 			productPrice:req.body.productPrice,
 			idCategory:req.body.productCategory,
 			productOffer:req.body.productOffer,
@@ -60,6 +77,14 @@ const ProductsController={
         res.redirect("/")
     },
     store: (req,res) =>{
+        const resultValidation =validationResult(req)
+		if(resultValidation.errors.length >0 ){
+			return res.render('products/addProduct.ejs',{
+				errors: resultValidation.mapped(),
+				oldData : req.body
+			})
+		}
+
             db.Product.create({
                 productName:req.body.productName,
                 productDescription:req.body.productDescription,
