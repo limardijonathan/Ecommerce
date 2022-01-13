@@ -17,13 +17,17 @@ const upload = multer({storage})
 const productController=require("../controllers/productController")
 
 
+const addProductValidations= require('../middlewares/addProductValidations')
+const editProductValidations = require('../middlewares/editProductValidations')
+
+
 router.get('/',productController.listProduct)
 router.get('/create',productController.addProduct);
 router.get('/productCart',productController.productCart)
 router.get('/:id',productController.productDetail)
-router.post('/',upload.single("productImage"),productController.store);
+router.post('/',upload.single("productImage"),addProductValidations,productController.store);
 router.get('/:id/edit',productController.editProduct)
-router.put('/:id/edit',upload.single("productImage"),productController.update); 
+router.put('/:id/edit',upload.single("productImage"),editProductValidations,productController.update); 
 router.delete('/:id',productController.destroy); 
 
 

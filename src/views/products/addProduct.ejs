@@ -13,15 +13,31 @@
                 </div>
                 <div class="info">
                     <label for="Product-name">Nombre del Producto</label><br/>
-                    <input type="text" name="productName" placeholder="ingresar el nombre del producto" id="name" required>
+                    <input type="text" name="productName" placeholder="ingresar el nombre del producto" id="name" value="<%= locals.oldData ? oldData.productName : null %>" >
+                    <% if (locals.errors  && errors.productName){ %>
+                        <div class= text-danger >
+                            <%= errors.productName.msg %>
+                        </div>
+                    <% } %>
+
                 </div>
                 <div class="info">
                     <label for="description">Descripcion del producto</label><br/>
-                    <textarea name="productDescription" placeholder="ingresar una descripcion del producto"></textarea>
+                    <input type="text" name="productDescription" placeholder="ingresar una descripcion del producto" value="<%= locals.oldData ? oldData.productDescription : null %>">
+                    <% if (locals.errors  && errors.productDescription){ %>
+                        <div class= text-danger >
+                            <%= errors.productDescription.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="info">
                     <label for="img">Imagen del Producto:</label><br/>
-                    <input name="productImage" type="file" id="img" accept=".jpg,.png"  required >
+                    <input name="productImage" type="file" id="img" accept=".jpg,.png" >
+                    <% if (locals.errors  && errors.productImage){ %>
+                        <div class= text-danger >
+                            <%= errors.productImage.msg %>
+                        </div>
+                    <% } %> 
                 </div>
                
                 <div class="info" >
@@ -32,11 +48,21 @@
                   <label class="label-info"><input type="checkbox" name="productCategory" value=3 class="option">Rosados</label><br>
                   <label class="label-info"><input type="checkbox" name="productCategory" value=4 class="option">Dulces</label><br>
                   <label class="label-info"><input type="checkbox" name="productCategory" value=5 class="option">Espumantes</label><br>
+                  <% if (locals.errors  && errors.productCategory){ %>
+                    <div class= text-danger >
+                        <%= errors.productCategory.msg %>
+                    </div>
+                <% } %>
                 </div>
                 </div>
                 <div class="info">
                     <label for="price">Precio:</label><br/>
-                    <input name="productPrice" type="number" step="0.01" id="price" placeholder= "ingresar el precio" required >
+                    <input name="productPrice" type="number" step="0.01" id="price" placeholder= "ingresar el precio" value="<%= locals.oldData ? oldData.productPrice : null %>" >
+                    <% if (locals.errors  && errors.productPrice){ %>
+                        <div class= text-danger >
+                            <%= errors.productPrice.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="info">
                     <label>¿esta de oferta?</label><br>
@@ -46,7 +72,7 @@
                     </div>
                     <br>
                     <label for="off">procentaje de oferta en caso de tenerlo</label><br/>
-                    <input name="productDiscount" type="number"  id="off" placeholder= "ingresar el procentaje de oferta" required >
+                    <input name="productDiscount" type="number"  id="off" placeholder= "ingresar el procentaje de oferta"  >
                 </div>
                 <div id="button">
                     <button type="submit">Agregar Producto</button>

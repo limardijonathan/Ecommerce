@@ -109,6 +109,13 @@ const usersControler={
 			})
 	},
 	update:(req,res)=>{
+		const resultValidation =validationResult(req)
+		if(resultValidation.errors.length >0 ){
+			return res.render('users/edituser.ejs',{
+				errors: resultValidation.mapped(),
+				oldData : req.body
+			})
+		}
         db.User.update({
 			userName:req.body.userName,
 			email:req.body.email,
