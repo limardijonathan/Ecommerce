@@ -4,8 +4,9 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
-        <div id="main-box" >    
-            <form action="/products" method="POST" enctype="multipart/form-data"> 
+        <div id="main-box" >   
+            <ul class="errores"></ul>
+            <form id="form" action="/products" method="POST" enctype="multipart/form-data"> 
                 <div>
                     <h2>
                         ¡Agrega un producto!
@@ -23,7 +24,7 @@
                 </div>
                 <div class="info">
                     <label for="description">Descripcion del producto</label><br/>
-                    <input type="text" name="productDescription" placeholder="ingresar una descripcion del producto" value="<%= locals.oldData ? oldData.productDescription : null %>">
+                    <input type="text" id="description" name="productDescription" placeholder="ingresar una descripcion del producto" value="<%= locals.oldData ? oldData.productDescription : null %>">
                     <% if (locals.errors  && errors.productDescription){ %>
                         <div class= text-danger >
                             <%= errors.productDescription.msg %>
@@ -31,15 +32,14 @@
                     <% } %>
                 </div>
                 <div class="info">
-                    <label for="img">Imagen del Producto:</label><br/>
-                    <input name="productImage" type="file" id="img" accept=".jpg,.png" >
+                    <label for="image">Imagen del Producto:</label><br/>
+                    <input name="productImage" id="image" type="file" accept=".jpg,.png" >
                     <% if (locals.errors  && errors.productImage){ %>
                         <div class= text-danger >
                             <%= errors.productImage.msg %>
                         </div>
                     <% } %> 
                 </div>
-               
                 <div class="info" >
                     <label>Categoria del producto:</label><br>
                     <div id="information">
@@ -78,9 +78,9 @@
                     <button type="submit">Agregar Producto</button>
                 </div>
             </form>
-
         </div>
     </main>
     <%- include ('../partials/footer') %>
+    <script src="/js/addProductValidation.js"></script>
 </body>
 </html>

@@ -116,3 +116,9 @@ main{
   
    
 }
+
+.errores{
+    color:#842029;
+    background-color: #F8D7DA;
+    border-radius: 10px;
+  }

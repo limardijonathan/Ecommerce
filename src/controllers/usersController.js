@@ -129,6 +129,6 @@ const usersControler={
 				res.redirect("/profile")
 			})
           })
-	},
+	}
 }
 module.exports= usersControler

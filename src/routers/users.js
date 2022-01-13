@@ -23,6 +23,16 @@ const storage = multer.diskStorage({
     }
 })
 
+var upload = multer({ storage: storage,
+    fileFilter: function (req, file, cb) {
+    if (!file.originalname.match(/\.(pdf|doc|docx|jpg)$/)) {
+    return cb(new Error('Error en el tipo de archivo.'));
+    }
+    cb(null, true);
+    }
+    });
+
+
 const uploadfile = multer({storage})
 
 router.get('/register',guestmiddleware, UsersControler.register)

@@ -4,8 +4,9 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
-        <div id="main-box" >    
-            <form action="/login" method="POST" enctype="multipart/form-data"> 
+        <div id="main-box" >
+            <ul class="errores"></ul>
+            <form id="form" action="/login" method="POST" enctype="multipart/form-data"> 
                 <div>
                     <h2>
                         ¡Bienvenido Nuevamente!
@@ -18,11 +19,11 @@
                 <% } %> 
                 <div class="info">
                     <label for="email">Email:</label><br/>
-                    <input type="email" name="email" placeholder="ingresar email" id="e-mail" required> 
+                    <input type="email" name="email" placeholder="ingresar email" id="e-mail"> 
                 </div>
                 <div class="info">
                     <label for="pass-word">Contraseña:</label></br>
-                    <input name="password" type="password" placeholder="Ingresar Contraseña" id="password" required maxlength="10" minlength="5">
+                    <input name="password" type="password" placeholder="Ingresar Contraseña" id="password">
                 </div>
                 <div class="auth-page__confirm-section">
                     <div class="checkbox">
@@ -43,5 +44,6 @@
         </div>
     </main>
     <%- include ('../partials/footer') %>
+    <script src="/js/loginValidation.js"></script>
 </body>
 </html>
