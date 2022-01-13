@@ -16,6 +16,16 @@ const storage = multer.diskStorage({
     }
 })
 
+var upload = multer({ storage: storage,
+    fileFilter: function (req, file, cb) {
+    if (!file.originalname.match(/\.(pdf|doc|docx|jpg)$/)) {
+    return cb(new Error('Error en el tipo de archivo.'));
+    }
+    cb(null, true);
+    }
+    });
+
+
 const uploadfile = multer({storage})
 
 router.get('/register',guestmiddleware, UsersControler.register)
@@ -44,6 +54,7 @@ router.get('/login', guestmiddleware,UsersControler.login)
 router.post('/login',uploadfile.single(''),UsersControler.loginProcess)
 router.get('/edit', UsersControler.edituser)
 router.put('/edit',uploadfile.single("image"),UsersControler.update); 
+router.post('/logout',UsersControler.logout)
 
 
 module.exports=router

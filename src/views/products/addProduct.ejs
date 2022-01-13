@@ -4,8 +4,9 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
-        <div id="main-box" >    
-            <form action="/products" method="POST" enctype="multipart/form-data"> 
+        <div id="main-box" >   
+            <ul class="errores"></ul>
+            <form id="form" action="/products" method="POST" enctype="multipart/form-data"> 
                 <div>
                     <h2>
                         ¡Agrega un producto!
@@ -13,15 +14,15 @@
                 </div>
                 <div class="info">
                     <label for="Product-name">Nombre del Producto</label><br/>
-                    <input type="text" name="productName" placeholder="ingresar el nombre del producto" id="name" required>
+                    <input type="text" name="productName" placeholder="ingresar el nombre del producto" id="name" required >
                 </div>
                 <div class="info">
                     <label for="description">Descripcion del producto</label><br/>
-                    <textarea name="productDescription" placeholder="ingresar una descripcion del producto"></textarea>
+                    <textarea id="description" name="productDescription" placeholder="ingresar una descripcion del producto"></textarea>
                 </div>
                 <div class="info">
                     <label for="img">Imagen del Producto:</label><br/>
-                    <input name="productImage" type="file" id="img" accept=".jpg,.png"  required >
+                    <input id="image" name="productImage" type="file" id="img" accept=".jpg,.jpeg,.gif,.png"  required >
                 </div>
                
                 <div class="info" >
@@ -46,7 +47,7 @@
                     </div>
                     <br>
                     <label for="off">procentaje de oferta en caso de tenerlo</label><br/>
-                    <input name="productDiscount" type="number"  id="off" placeholder= "ingresar el procentaje de oferta" required >
+                    <input name="productDiscount" type="number"  id="off" placeholder= "ingresar el procentaje de oferta">
                 </div>
                 <div id="button">
                     <button type="submit">Agregar Producto</button>
@@ -56,5 +57,6 @@
         </div>
     </main>
     <%- include ('../partials/footer') %>
+    <script src="/js/addProductValidation.js"></script>
 </body>
 </html>

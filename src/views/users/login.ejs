@@ -4,8 +4,9 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
-        <div id="main-box" >    
-            <form action="/login" method="POST" enctype="multipart/form-data"> 
+        <div id="main-box" >
+            <ul class="errores"></ul>
+            <form id="form" action="/login" method="POST" enctype="multipart/form-data"> 
                 <div>
                     <h2>
                         ¡Bienvenido Nuevamente!
@@ -43,5 +44,6 @@
         </div>
     </main>
     <%- include ('../partials/footer') %>
+    <script src="/js/loginValidation.js"></script>
 </body>
 </html>

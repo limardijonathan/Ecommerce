@@ -123,5 +123,9 @@ const usersControler={
 			})
           })
 	},
+	logout:(req,res)=>{
+		req.session.userLogged.destroy,
+		res.render('users/login.ejs')
+	},
 }
 module.exports= usersControler
