@@ -14,7 +14,7 @@ module.exports = (sequelize,dataTypes) =>{
             type: dataTypes.STRING(1024)
         },
         productImage:{
-            type: dataTypes.BLOB
+            type: dataTypes.STRING(255)
         },
         productPrice:{
             type: dataTypes.DECIMAL(10, 2)
@@ -22,9 +22,7 @@ module.exports = (sequelize,dataTypes) =>{
         idCategory:{
            type: dataTypes.BIGINT(10).UNSIGNED
         },
-        productOffer:{
-            type:  dataTypes.STRING.BINARY
-        },
+       
         productDiscount:{
             type: dataTypes.INTEGER
         }
@@ -36,6 +34,10 @@ module.exports = (sequelize,dataTypes) =>{
     }
 
     const Product = sequelize.define(alias,cols,config)
-    //aca las asociaciones
+    Product.associate = function (models) {
+        Product.belongsTo(models.Category, { 
+            as: "category",
+            foreignKey: "idCategory"
+        })}
     return Product
 }

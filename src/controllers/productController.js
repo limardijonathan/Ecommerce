@@ -55,7 +55,6 @@ const ProductsController={
                 //productImage: req.file.filename,
                 productPrice:req.body.productPrice,
                 idCategory:req.body.productCategory,
-                productOffer:req.body.productOffer,
                 productDiscount: req.body.productDiscount
               }, {
                 where: { id: req.params.id },
@@ -70,7 +69,9 @@ const ProductsController={
         
     },
     listProduct:(req,res) =>{
-        db.Product.findAll()
+        db.Product.findAll({
+            include :['category']
+        })
         .then(function(products){
             res.render("products/productList.ejs",
             {productsSent: products}) 
@@ -95,7 +96,6 @@ const ProductsController={
                 productImage: req.file.filename,
                 productPrice:req.body.productPrice,
                 idCategory:req.body.productCategory,
-                productOffer:req.body.productOffer,
                 productDiscount: req.body.productDiscount     
 
             }).then((user)=>{

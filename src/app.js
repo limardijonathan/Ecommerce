@@ -7,6 +7,8 @@ const userLoggedMiddleware =require('./middlewares/userLoggedMiddleware')
 const mainRouter =require("./routers/main")
 const UserRouter = require("./routers/users")
 const ProductsRouter =require("./routers/products")
+const apiProductRouter= require('./routers/api/products')
+const apiUserRouter= require('./routers/api/users')
 const methodOverride=require("method-override")
 const cookie = require("cookie-parser")
 
@@ -47,6 +49,8 @@ app.listen(5050, ()=>{
 app.use("/", mainRouter)
 app.use("/", UserRouter)
 app.use("/products", ProductsRouter)
+app.use('/api',apiProductRouter )
+app.use('/api',apiUserRouter )
 
 
 
