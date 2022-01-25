@@ -6,10 +6,10 @@ CREATE TABLE `product` (
    `id` int NOT NULL AUTO_INCREMENT,
    `productName` VARCHAR(255) NOT NULL,
    `productDescription` VARCHAR(1024) NOT NULL,
-   `productImage` BLOB NOT NULL,
+   `productImage` VARCHAR(255) NOT NULL,
    `productPrice` DECIMAL(10,2) NOT NULL,
    `idCategory` INT NOT NULL,
-   `productOffer` BINARY NOT NULL,
+ 
    `productDiscount` INT NOT NULL,
    PRIMARY KEY (`id`)
 );

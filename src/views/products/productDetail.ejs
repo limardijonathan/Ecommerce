@@ -13,7 +13,7 @@
                     </div>
                     <div>  
                         <h1 class = "price">$<%= productSent.productPrice %></h1>
-                        <% if(productSent.productOffer){%>
+                        <% if(productSent.productDiscount != 0){%>
                             <h3 class = "discount"><%= productSent.productDiscount%>%off</h3>
                         <%}%>
                         <br>
