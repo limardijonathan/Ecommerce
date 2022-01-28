@@ -12,8 +12,10 @@ const productAPIController ={
              let contRosado =0
              let contDulces =0
              let contEspumantes =0
+             
 
              products.map((product)=>{
+
                  if (product.category.categoryName=='Blanco'){
                     contBlanco=contBlanco+1
                  }
@@ -40,6 +42,7 @@ const productAPIController ={
                     Dulces: contDulces,
                     Espumantes: contEspumantes
                 },
+                countCategory:5,
                 products:products.map(product => {
                     let id= {
                         id: product.id,
