@@ -33,6 +33,7 @@ const productAPIController ={
 
             let respuesta ={
                 count: products.length,
+                CountCategory: products.countByCategory,
                 countByCategory:{
                     Blanco: contBlanco,
                     Tinto: contTinto,
