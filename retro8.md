@@ -1,3 +1,6 @@
+Repositorio github - Protecto react:
+https://github.com/limardijonathan/ReactBuenosTintos.git
+
 1- Comenzar a hacer:
 *Dividir la carga de trabajo por igual para cada integrante del equipo
 *Deberiamos de tener mas comunicacion entre nosotros
