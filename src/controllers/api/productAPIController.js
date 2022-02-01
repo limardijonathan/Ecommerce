@@ -13,6 +13,12 @@ const productAPIController ={
              let contDulces =0
              let contEspumantes =0
              
+             var countByCategory = {
+                data:[],
+                agregarCategorias: function(data){
+                    this.data.push(data);
+                }
+            }
 
              products.map((product)=>{
 
@@ -33,16 +39,16 @@ const productAPIController ={
                  }
              })
 
+             countByCategory.agregarCategorias({id: 'Espumantes', cantidad: contEspumantes})
+             countByCategory.agregarCategorias({id: 'Dulces', cantidad: contDulces})
+             countByCategory.agregarCategorias({id: 'Rosado', cantidad: contRosado})
+             countByCategory.agregarCategorias({id: 'tinto', cantidad: contTinto})
+             countByCategory.agregarCategorias({id: 'Blanco', cantidad: contBlanco})
+
+
             let respuesta ={
                 count: products.length,
-                CountCategory: products.countByCategory,
-                countByCategory:{
-                    Blanco: contBlanco,
-                    Tinto: contTinto,
-                    Rosado: contRosado,
-                    Dulces: contDulces,
-                    Espumantes: contEspumantes
-                },
+                countByCategory,
                 countCategory:5,
                 products:products.map(product => {
                     let id= {
