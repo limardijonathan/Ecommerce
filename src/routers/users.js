@@ -37,6 +37,7 @@ const uploadfile = multer({storage})
 
 router.get('/register',guestmiddleware, UsersControler.register)
 router.get('/profile/', authMiddleware,UsersControler.profile)
+router.get('/logout/', authMiddleware,UsersControler.logout)
 
 
 router.post('/register', uploadfile.single('image'),registerValidations,UsersControler.processRegister)

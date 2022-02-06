@@ -16,6 +16,7 @@ const ProductsController={
 				id : req.params.id
 			}
 		}).then(function(product){
+            
             res.render("products/productDetail.ejs",
             {productSent: product})
         }) 
@@ -73,6 +74,7 @@ const ProductsController={
             include :['category']
         })
         .then(function(products){
+           
             res.render("products/productList.ejs",
             {productsSent: products}) 
         })

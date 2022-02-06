@@ -41,9 +41,9 @@ const productAPIController ={
 
              countByCategory.agregarCategorias({id: 'Espumantes', cantidad: contEspumantes})
              countByCategory.agregarCategorias({id: 'Dulces', cantidad: contDulces})
-             countByCategory.agregarCategorias({id: 'Rosado', cantidad: contRosado})
-             countByCategory.agregarCategorias({id: 'tinto', cantidad: contTinto})
-             countByCategory.agregarCategorias({id: 'Blanco', cantidad: contBlanco})
+             countByCategory.agregarCategorias({id: 'Rosados', cantidad: contRosado})
+             countByCategory.agregarCategorias({id: 'Tintos', cantidad: contTinto})
+             countByCategory.agregarCategorias({id: 'Blancos', cantidad: contBlanco})
 
 
             let respuesta ={

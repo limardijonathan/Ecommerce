@@ -28,6 +28,7 @@ const usersControler={
 				if (isOkThePassword){
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin
+					
 					if(req.body.checkBox){
 						res.cookie('userEmail', req.body.email, {maxAge:(1000 * 60) * 2})
 					}
@@ -129,6 +130,10 @@ const usersControler={
 				res.redirect("/profile")
 			})
           })
+	},
+	logout:(req,res)=>{
+		req.session.destroy()
+		return res.redirect('/')
 	}
 }
 module.exports= usersControler
