@@ -23,7 +23,7 @@ module.exports = (sequelize,dataTypes) =>{
            type: dataTypes.DATE
         },
         isAdmin:{
-            type:  dataTypes.STRING.BINARY
+            type: dataTypes.BOOLEAN
         },
        
     
