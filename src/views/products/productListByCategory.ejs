@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head', {title:"Lista de productos", css:"productListStyles"}) %>
+<body>
+    <%- include ('../partials/header') %>
+    <main>
+        <section>
+            <div class="header-product-list">
+                <div class="div-header-product-list">
+                    <h1 class="div-header-h1-filter"><%= categorySent.categoryName %>
+                    </h1>
+                </div>
+                <div class="order-header-product-list">
+                    <a class= "add-header-product-list" href="/products/create">Agregar</a>
+                </div>
+                <div class="order-header-product-list">
+                    <select name="category" id="category" class="form-input">
+                        <option value="">Ordenar por</option>
+                        <option value="in-sale">En oferta</option>
+                        <option value="visited">Últimos agregados</option>
+                    </select>
+                </div>
+            </div>
+            <div class="section-product">
+                <div class="products">
+                    <% productsSent.forEach(producto => { %> 
+                    <div class="article-products">
+                        <a style="text-decoration: none;color: #000000;" href="/products/<%= producto.id %>">
+                            <img src="/img/products/<%= producto.productImage %>" alt="<%= producto.productDescription %>" class="product_img">
+                            <div class="main-article">
+                                <% if (producto.productDiscount == 0 ){ %>
+                                <p class="price">$<%= producto.productPrice %></p>
+                                <% } else{ %>
+                                <p class="price">$<%= producto.productPrice%>  -  <%= producto.productDiscount%> %OFF</p>
+                                <%} %>
+                                <p class="discount"></p>
+                                <h4 class="description"><%= producto.productName %></h4>
+                               
+                                
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <% }) %>                     
+                </div>                
+            </div>
+        </section>
+    </main>
+    <%- include ('../partials/footer') %>
+</body>
+</html>

@@ -22,6 +22,8 @@ const editProductValidations = require('../middlewares/editProductValidations')
 
 
 router.get('/',productController.listProduct)
+router.get('/search',productController.searchProduct)
+router.get('/category/:id',productController.listProductCategory)
 router.get('/create',productController.addProduct);
 router.get('/productCart',productController.productCart)
 router.get('/:id',productController.productDetail)

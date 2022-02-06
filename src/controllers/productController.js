@@ -65,9 +65,6 @@ const ProductsController={
               })
     
         }})
-       
-
-        
     },
     listProduct:(req,res) =>{
         db.Product.findAll({
@@ -79,6 +76,36 @@ const ProductsController={
             {productsSent: products}) 
         })
 
+    },    
+    listProductCategory:(req,res) =>{
+        db.Category.findOne({
+            where:{
+                idCategory : req.params.id
+            },
+        }).then(function(category){
+            db.Product.findAll({
+                where: {
+                    idCategory : req.params.id
+                },
+            })
+            .then(function(products){
+                res.render("products/productListByCategory.ejs",
+                {productsSent: products,
+                categorySent: category}) 
+            })
+    
+        })
+
+    },searchProduct:(req,res) =>{
+            db.Product.findAll({
+                where: {
+                    productName :  req.query.search 
+                },
+            })
+            .then(function(products){
+                res.render("products/productListByName.ejs",
+                {productsSent: products}) 
+            })
     },
     redirect: (req,res)=>{
         res.redirect("/")
