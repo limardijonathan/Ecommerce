@@ -12,7 +12,9 @@
                 </div>
                 <div class="order-header-product-list">
                   
+                    <% if (user && user.isAdmin){ %>
                         <a class= "add-header-product-list" href="/products/create">Agregar</a>
+                   <%}%>
                    
                    
                 </div>

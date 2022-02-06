@@ -18,7 +18,7 @@ const ProductsController={
 		}).then(function(product){
             
             res.render("products/productDetail.ejs",
-            {productSent: product})
+            {productSent: product,user:req.session.userLogged})
         }) 
 
     },addProduct:(req,res) =>{
@@ -31,7 +31,7 @@ const ProductsController={
 		}).then(function(product){
             
             res.render("products/editProduct",
-            {productSent: product,})
+            {productSent: product})
         })
     },
     update:(req,res)=>{
@@ -73,7 +73,7 @@ const ProductsController={
         .then(function(products){
            
             res.render("products/productList.ejs",
-            {productsSent: products}) 
+            {productsSent: products,user:req.session.userLogged}) 
         })
 
     },    
