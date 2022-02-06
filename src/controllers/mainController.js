@@ -14,6 +14,20 @@ const mainControler={
         res.render("users/login.ejs")
     },redirect: (req,res)=>{
         res.redirect("/")
+    },sendConditions:(req,res)=>{
+        res.render("index/sendConditions.ejs")
+    },howToBuy:(req,res)=>{
+        res.render("index/howToBuy.ejs")
+        
+    },legals:(req,res)=>{
+        res.render("index/legals.ejs")
+        
+    },promotions:(req,res)=>{
+        res.render("index/promotions.ejs")
+        
+    },regrets:(req,res)=>{
+        res.render("index/regrets.ejs")
+        
     }
 }
 module.exports= mainControler
